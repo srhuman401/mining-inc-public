@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnkjuyqn74dnm"]
+
+[ext_resource type="Texture2D" uid="uid://csbietcjfrecy" path="res://assets/textures/entity/TREE_1.png" id="1_aectu"]
+[ext_resource type="Texture2D" uid="uid://c3d8gnk5r0lmq" path="res://assets/textures/entity/TREELOG_1.png" id="2_ehpyl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sr4kb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aectu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ehpyl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EntTreeVisual" type="AnimatedSprite2D" unique_id=1346121434]
+sprite_frames = SubResource("SpriteFrames_sr4kb")
+offset = Vector2(16, -30)

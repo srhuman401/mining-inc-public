@@ -1,0 +1,41 @@
+week 2 (week 1 was a success)
+this week should focus on UI, and gameplay feel. With a few new items and features.
+if atleast 3 tasks are done per week, its a success.
+
+Monday [X]: 
+- [X] implement ore break/damage particles
+- [X] plan game title
+- [X] plan UIDesign for HUD(not submenus) and MainMenu, create prototype for HUD
+- [X] create tree art, stump / normal variants
+
+Tuesday [X]:
+- [X] implement sounds added on last friday
+- [X] fix bug: furnace not placing on grass/ground, but places in cave?
+- [X] use threaded loading for save files (and loading screen)
+- [X] create title art for main menu
+
+Wednesday [X]:
+- [X] create icons for: pickaxes, and crafting
+- [X] create basic main menu UI
+- [X] create main menu slots menu (loading and viewing)
+- [X] create art/icons for: loading spinner and HUD tabs: researching, companybase, and resources
+- [X] create art for Drill Tier3 (the final tier)
+
+Thursday [X]:
+- [X] create basic hud UI, with sidebar for: resources, researching, and companybase
+- [X] implement Drill Tier3
+- [X] create art for iron ore and icons: iron ingot, iron ore
+- [X] implement Iron Ore into the game
+ 
+Friday []:
+- [X] revaluate all drills and ores, compare and rebalance if needed
+- [X] expand map to include Iron Ore accounting for progression
+- [] create ui for Upgrading Base (doesnt need functionality)
+- [] implement trees (basically entities)
+- [] create art for tiles: sand, water top, and water
+
+Weekend:
+- Playtest
+- Find bugs (fix, or write down)
+- Plan week 3
+- Enjoy your rest

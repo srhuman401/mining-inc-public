@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://5pe7h434str1"]
+
+[ext_resource type="Resource" uid="uid://bv3i5uadt3o40" path="res://data/resource_data/iron_ingot/display.tres" id="1_bdfwk"]
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="2_har3s"]
+[ext_resource type="Resource" uid="uid://h41plqqr6mn8" path="res://data/resource_data/iron_ingot/smelt.tres" id="3_jqnkc"]
+
+[resource]
+script = ExtResource("2_har3s")
+for_resource_enum = 6
+smelt_behaviour = ExtResource("3_jqnkc")
+display_behaviour = ExtResource("1_bdfwk")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

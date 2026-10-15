@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://cvdy7x8rhjhas"]
+
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="1_st1po"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_aufta"]
+
+[resource]
+script = ExtResource("2_aufta")
+display_name = "Furnace"
+icon_display_image = ExtResource("1_st1po")
+entity_id = 5
+placement_type = 2
+debug_name = "FURNACE"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

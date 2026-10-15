@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://75mm40sjsui8"]
+
+[ext_resource type="Texture2D" uid="uid://csbietcjfrecy" path="res://assets/textures/entity/TREE_1.png" id="1_bqlqy"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_f6jq6"]
+
+[resource]
+script = ExtResource("2_f6jq6")
+display_name = "companyHQitem"
+icon_display_image = ExtResource("1_bqlqy")
+hidden = true
+entity_id = 2
+placement_type = 2
+debug_name = "hq"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

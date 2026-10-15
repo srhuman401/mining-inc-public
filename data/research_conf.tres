@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ResearchConfig" format=3 uid="uid://bec76nhhr0fgt"]
+
+[ext_resource type="Script" uid="uid://75c5p3ju6nxd" path="res://scripts/resource/research_config.gd" id="1_6yskq"]
+[ext_resource type="Script" uid="uid://caxrphxkliwkd" path="res://scripts/resource/research_upgrade.gd" id="2_5tm58"]
+[ext_resource type="Script" uid="uid://p1hyjhc0h28h" path="res://scripts/resource/extra_upgrade_element_text.gd" id="3_5tm58"]
+
+[sub_resource type="Resource" id="Resource_5tm58"]
+script = ExtResource("2_5tm58")
+remove_fog_height = 1500
+resource_requirements = Dictionary[int, int]({
+0: 150,
+4: 50
+})
+metadata/_custom_type_script = "uid://caxrphxkliwkd"
+
+[resource]
+script = ExtResource("1_6yskq")
+upgrades = Array[ExtResource("2_5tm58")]([null, SubResource("Resource_5tm58")])
+metadata/_custom_type_script = "uid://75c5p3ju6nxd"

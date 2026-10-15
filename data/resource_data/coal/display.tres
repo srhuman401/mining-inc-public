@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameResourceDisplayInfo" format=3 uid="uid://dhb0uvpq35f4o"]
+
+[ext_resource type="Texture2D" uid="uid://c5v6erij2pu8c" path="res://assets/textures/icon/ICON_COAL.png" id="1_u0ntu"]
+[ext_resource type="Script" uid="uid://birkbon5c8x" path="res://scripts/resource/resource_display_data.gd" id="2_caqdj"]
+
+[resource]
+script = ExtResource("2_caqdj")
+display_name = "Coal"
+image = ExtResource("1_u0ntu")
+show_in_resource_list = true
+metadata/_custom_type_script = "uid://birkbon5c8x"

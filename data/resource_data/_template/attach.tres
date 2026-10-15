@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://7ls7xry0y2e4"]
+
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="1_4lcxb"]
+[ext_resource type="Resource" uid="uid://s7kemovdqtjf" path="res://data/resource_data/_template/display.tres" id="1_fapod"]
+[ext_resource type="Resource" uid="uid://754phgrw3yf4" path="res://data/resource_data/_template/sell.tres" id="3_6r4ts"]
+[ext_resource type="Resource" uid="uid://dkbfxneready8" path="res://data/resource_data/_template/smelt.tres" id="3_s7y48"]
+
+[resource]
+script = ExtResource("1_4lcxb")
+smelt_behaviour = ExtResource("3_s7y48")
+display_behaviour = ExtResource("1_fapod")
+sell_behaviour = ExtResource("3_6r4ts")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

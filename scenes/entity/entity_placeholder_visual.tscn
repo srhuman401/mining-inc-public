@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dsnkx5gvgd17g"]
+
+[ext_resource type="Texture2D" uid="uid://bm6lc22n46jdi" path="res://assets/textures/tile/PLACEHOLDER_TIL.png" id="1_iato7"]
+
+[node name="EntityPlaceholderVisual" type="Sprite2D" unique_id=516048338]
+texture = ExtResource("1_iato7")
+offset = Vector2(16, 16)

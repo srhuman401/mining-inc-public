@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DatabaseConfiguration" format=3 uid="uid://bkxfsgja8mmf3"]
+
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="1_fcujh"]
+[ext_resource type="Script" uid="uid://b2uicvmplxgd1" path="res://scripts/resource/database_config.gd" id="1_tvcye"]
+[ext_resource type="Resource" uid="uid://d4aerx73hgbpg" path="res://data/items/drill_tier_1.tres" id="2_snbgd"]
+[ext_resource type="Resource" uid="uid://dyt6smn3t1j3h" path="res://data/items/drill_tier_2.tres" id="3_sibx0"]
+[ext_resource type="Resource" uid="uid://cvdy7x8rhjhas" path="res://data/items/furnace.tres" id="4_qm0q8"]
+[ext_resource type="Resource" uid="uid://cebv2l4xbtlfj" path="res://data/items/drill_tier_3.tres" id="5_ksfjd"]
+[ext_resource type="Resource" uid="uid://bknkqx2411qg5" path="res://data/items/drill_double.tres" id="6_hqinv"]
+
+[resource]
+resource_name = "Main Databse Config"
+script = ExtResource("1_tvcye")
+items_pool = Array[ExtResource("1_fcujh")]([ExtResource("2_snbgd"), ExtResource("3_sibx0"), ExtResource("4_qm0q8"), ExtResource("5_ksfjd"), ExtResource("6_hqinv")])
+items_folder = "res://data/items/"
+resource_data_folder = "res://data/resource_data/"
+entity_behv_folder = "res://scripts/game/ent_behaviours/"
+entity_configs_folder = "res://data/entity_config/"
+metadata/_custom_type_script = "uid://b2uicvmplxgd1"

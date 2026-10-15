@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bmrsupxf58ieq"]
+
+[ext_resource type="Texture2D" uid="uid://bkmb0tuvapxa7" path="res://assets/textures/entity/buildings/FURNACE.png" id="1_e31pw"]
+
+[node name="EntFurnaceVisual" type="Sprite2D" unique_id=1388465910]
+texture = ExtResource("1_e31pw")

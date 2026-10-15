@@ -1,0 +1,23 @@
+WEEK 8
+WE ARE SO BACK 😍
+
+steam page still not up (ITS TAKING SO FKING long)
+Mining INC is back in development and I cannot wait to make the gameloop playable (the day the game is fully playable is the day I will celebrate and forever remember)
+
+NOTE: I have skipped THU and FRI due to GTMK Game jam occurring, I do not want to miss GMTK.
+
+DAYS:
+- MON [ SKIPPED ] <- skipped for planning. And I don't do Mondays anyways
+- TUE [ 5/5 ] BACK ON TRACK
+- WED [ 5/5 ] SELLLLIIIINNNGGGG DONE: JUST NEEDS A UI
+- THU [ 3/5 ] did somettgutggghjgffh going to dfocus on GMTK game jam though
+- FRI [ 0/5 ]
+
+TODO:
+- [-] (2) remake art for: furnace
+- [-] (3) adjust map to integrate lighting/shading
+- [WED] (5) create selling backend (its like smelting, queue resources to sell, but you can insta sell with the press of a button)
+- [TUE] (5) rework resources to be more modular (use individual resource files for smelting info and display info. Example: data/resource/raw_gold_data/smelt.tres, display.tres, sell.tres). Instead of having one big data/resource/smeling_config.tres that defines a huge dictionary of each resource in the game.
+- [-] (3) make it so that research/upgrades has modifiers which can do a lot of things via a .redeem() maybe, like increase a multiplier of cash earned from sold items. Or faster research times, all extends a BaseUpgradeModifier resource.
+- [-] (1) research why the games pixels are kinda blurry/smudged when moved quickly. Try fix If possible
+- [-] (1) look into why mining particles don't go away and try to fix it. Possible solution: Move the current mining "dust" particles into drills only and create a new player mining effect later

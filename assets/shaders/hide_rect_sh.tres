@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c6u28qius82pi"]
+
+[ext_resource type="Shader" uid="uid://c2q55psn1m3ra" path="res://assets/shaders/hide_rect_sh.gdshader" id="1_7htm0"]
+
+[resource]
+shader = ExtResource("1_7htm0")
+shader_parameter/rect_pos = Vector2(0.5, 0.5)
+shader_parameter/rect_size = Vector2(259, 259)

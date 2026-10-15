@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://cebv2l4xbtlfj"]
+
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="1_ho5gt"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_oq8er"]
+
+[resource]
+script = ExtResource("2_oq8er")
+display_name = "Drill Tier III"
+icon_display_image = ExtResource("1_ho5gt")
+entity_id = 6
+placement_type = 0
+debug_name = "DRILL_TIER_3"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

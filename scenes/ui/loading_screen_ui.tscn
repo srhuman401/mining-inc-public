@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cv77pvvasgffs"]
+
+[ext_resource type="Script" uid="uid://drxlxhh04fngh" path="res://scripts/ui/loading_screen_ui.gd" id="1_55dkp"]
+
+[sub_resource type="Animation" id="Animation_0fctj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Loading."]
+}
+
+[sub_resource type="Animation" id="Animation_rqdcv"]
+resource_name = "loop"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 0.99, 2.02, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Loading.", "Loading..", "Loading...", "Loading."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4fso"]
+_data = {
+&"RESET": SubResource("Animation_0fctj"),
+&"loop": SubResource("Animation_rqdcv")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1762082934]
+script = ExtResource("1_55dkp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2079833859]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1706652702]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 1315.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 93
+text = "Loading."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=828165721]
+libraries/ = SubResource("AnimationLibrary_q4fso")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://brq836hvnitot"]
+
+[ext_resource type="Texture2D" uid="uid://cy83tpce5ja45" path="res://assets/textures/entity/buildings/SELLING_V_1.png" id="1_ptedv"]
+
+[node name="EntSellVisual" type="Sprite2D" unique_id=1388465910]
+texture = ExtResource("1_ptedv")

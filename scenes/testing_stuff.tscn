@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://8m3eivinp6de"]
+
+[ext_resource type="PackedScene" uid="uid://bx08s6vqqpkwv" path="res://scenes/vfx/vfx_oremining.tscn" id="1_010u6"]
+
+[node name="Node2D" type="Node2D" unique_id=1344399601]
+
+[node name="adornee" parent="." unique_id=1831017029 instance=ExtResource("1_010u6")]

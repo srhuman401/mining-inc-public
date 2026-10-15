@@ -1,0 +1,11 @@
+POINTS: 0
+
+TASKS:
+- [-] remake furnace art to match new style
+- [-] make selling UI functional (dependent on above task)
+- [-] fix mining particle effects to be for drills only
+- [-] create data for all current resources that are sorta balanced and have visuals. Also make UI use the new resourceData db system instead of hardcoded values for visuals and etc.
+
+DO 1 TASK A DAY
+EACH TASK GIVES 1 POINT
+3 POINTS AT MOST FOR WEEK TO BE A SUCCESS

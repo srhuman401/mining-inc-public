@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResourceDisplayInfo" format=3 uid="uid://c620x42w8d0ry"]
+
+[ext_resource type="Texture2D" uid="uid://csbietcjfrecy" path="res://assets/textures/entity/TREE_1.png" id="1_r53f5"]
+[ext_resource type="Script" uid="uid://birkbon5c8x" path="res://scripts/resource/resource_display_data.gd" id="2_ue851"]
+
+[resource]
+script = ExtResource("2_ue851")
+display_name = "Wood"
+image = ExtResource("1_r53f5")
+list_display_order = 9
+show_in_resource_list = true
+metadata/_custom_type_script = "uid://birkbon5c8x"

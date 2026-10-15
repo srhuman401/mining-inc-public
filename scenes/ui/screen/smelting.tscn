@@ -1,0 +1,284 @@
+[gd_scene format=3 uid="uid://i8n5wrw6wit0"]
+
+[ext_resource type="Script" uid="uid://b7s7br4vjopx8" path="res://scripts/ui/game/smelting_ui.gd" id="1_lpsdv"]
+[ext_resource type="PackedScene" uid="uid://dtsfkqu7ktt3l" path="res://scenes/ui/dark_background.tscn" id="2_fkwd5"]
+[ext_resource type="Theme" uid="uid://co1uyaxwok2kw" path="res://assets/ui_or_styling/button/col_red_btn.tres" id="3_4kjw0"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="3_qagab"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="4_qagab"]
+[ext_resource type="PackedScene" uid="uid://dowgu0jiw3w43" path="res://scenes/ui/smelting/smelt_mat_element.tscn" id="5_qx77n"]
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="6_qcdjx"]
+[ext_resource type="Script" uid="uid://c6t0i37inne46" path="res://scripts/ui/components/button_hover.gd" id="7_qx77n"]
+[ext_resource type="Script" uid="uid://bt3pmb8m1poou" path="res://scenes/ui/fix_scroll_flow_container.gd" id="8_lpsdv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qagab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qcdjx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rr3pd"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("6_qcdjx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.5400761, 0.3555004, 0.23889899, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rr3pd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpsdv"]
+
+[node name="Smelting" type="Control" unique_id=2090846678 node_paths=PackedStringArray("close_button", "mode_available", "mode_unavailable", "num_furnace_display", "currently_smelting_display", "max_button", "smelting_list_display", "materials_list_flow_display")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lpsdv")
+close_button = NodePath("Popup/Close")
+mode_available = NodePath("Popup/Norm")
+mode_unavailable = NodePath("Popup/Unavailable")
+num_furnace_display = NodePath("Popup/Norm/FurnaceCounter")
+currently_smelting_display = NodePath("Popup/Norm/SmeltingDisplay")
+max_button = NodePath("Popup/Norm/Materials/Button")
+smelting_list_display = NodePath("Popup/Norm/SmeltingNow/ScrollContainer/HBoxContainer")
+materials_list_flow_display = NodePath("Popup/Norm/Materials/ScrollContainer/FlowContainer")
+element_list_material = ExtResource("5_qx77n")
+green = Color(0, 1, 0, 1)
+red = Color(1, 0, 0, 1)
+screen_id = 5
+
+[node name="DarkBackground" parent="." unique_id=1748504873 instance=ExtResource("2_fkwd5")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Popup" type="Control" parent="." unique_id=77332977]
+custom_minimum_size = Vector2(961.6, 586.32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_qagab")
+
+[node name="Background" type="Panel" parent="Popup" unique_id=1330707034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Unavailable" type="Control" parent="Popup" unique_id=1290739966]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Popup/Unavailable" unique_id=1956999274]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -11.5
+offset_right = 172.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qagab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcdjx")
+text = "YOU NEED ATLEAST 1 FURNACE TO USE THIS!"
+
+[node name="Norm" type="Control" parent="Popup" unique_id=1962210431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SmeltingDisplay" type="Label" parent="Popup/Norm" unique_id=1920363633]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -241.99998
+offset_top = 70.54
+offset_right = 242.0
+offset_bottom = 137.54005
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qagab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcdjx")
+text = "100 FUEL | 100s LEFT"
+
+[node name="FurnaceCounter" type="Label" parent="Popup/Norm" unique_id=1968537274]
+layout_mode = 1
+offset_right = 344.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qagab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcdjx")
+text = "1 FURNACE"
+
+[node name="SmeltingNow" type="Control" parent="Popup/Norm" unique_id=1380001021]
+custom_minimum_size = Vector2(911.985, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.99298
+offset_top = -95.115005
+offset_right = 455.992
+offset_bottom = 23.33487
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Popup/Norm/SmeltingNow" unique_id=631744799]
+custom_minimum_size = Vector2(910.98, 129.34)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rr3pd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup/Norm/SmeltingNow" unique_id=1348922331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.992981
+offset_right = -6.9920044
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Norm/SmeltingNow/ScrollContainer" unique_id=1736716601]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="SmeltingStatus" type="Label" parent="Popup/Norm/SmeltingNow" unique_id=147184595]
+layout_mode = 0
+offset_top = -27.595
+offset_right = 389.99298
+offset_bottom = 8.405001
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rr3pd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lpsdv")
+text = "CURRENTLY SMELTING:"
+
+[node name="Materials" type="Control" parent="Popup/Norm" unique_id=317099811]
+custom_minimum_size = Vector2(868.025, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -433.65298
+offset_top = 78.535
+offset_right = 434.372
+offset_bottom = 283.19998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Popup/Norm/Materials" unique_id=232491518]
+custom_minimum_size = Vector2(881.55, 129.34)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.5570068
+offset_right = 9.967957
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rr3pd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup/Norm/Materials" unique_id=1046229339]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.652954
+offset_top = 6.464966
+offset_right = 6.9679565
+offset_bottom = -15.200012
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_lpsdv")
+
+[node name="FlowContainer" type="FlowContainer" parent="Popup/Norm/Materials/ScrollContainer" unique_id=156659596]
+layout_mode = 2
+size_flags_horizontal = 3
+last_wrap_alignment = 1
+
+[node name="Label" type="Label" parent="Popup/Norm/Materials" unique_id=187099672]
+layout_mode = 0
+offset_left = -6.58
+offset_top = -29.575
+offset_right = 383.413
+offset_bottom = 6.424999
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rr3pd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lpsdv")
+text = "RESOURCES:"
+
+[node name="Button" type="Button" parent="Popup/Norm/Materials" unique_id=1565916340]
+layout_mode = 0
+offset_left = -39.347046
+offset_top = 36.464966
+offset_right = -11.347046
+offset_bottom = 138.46497
+theme = ExtResource("3_qagab")
+text = "M
+A
+X"
+
+[node name="UIButtonHover" type="Node" parent="Popup/Norm/Materials/Button" unique_id=70359474]
+script = ExtResource("7_qx77n")
+metadata/_custom_type_script = "uid://c6t0i37inne46"
+
+[node name="Close" type="Button" parent="Popup" unique_id=1564525724]
+custom_minimum_size = Vector2(65.67, 65.67)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -35.11493
+offset_top = -23.600006
+offset_right = 30.555054
+offset_bottom = 42.069992
+grow_horizontal = 0
+theme = ExtResource("3_4kjw0")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "X"
+
+[node name="ButtonHover" parent="Popup/Close" unique_id=753706803 instance=ExtResource("4_qagab")]

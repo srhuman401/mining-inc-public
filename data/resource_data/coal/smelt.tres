@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GameResourceSmeltingData" format=3 uid="uid://j75583fh13va"]
+
+[ext_resource type="Script" uid="uid://dne0ur4hqkexf" path="res://scripts/resource/resource_smelting_data.gd" id="1_qg60r"]
+
+[resource]
+script = ExtResource("1_qg60r")
+smeltable_type = 2
+metadata/_custom_type_script = "uid://dne0ur4hqkexf"

@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://dykpngkin3dwu"]
+
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="1_o2kxc"]
+[ext_resource type="Script" uid="uid://r1rafujlode2" path="res://scripts/main_menu/save_slot.gd" id="2_b37ag"]
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="2_kpkvw"]
+[ext_resource type="Texture2D" uid="uid://prds5kcn03kq" path="res://assets/textures/icon/ICON_UI_NEW.png" id="3_5qaaj"]
+[ext_resource type="Texture2D" uid="uid://diad1vuhko7vf" path="res://assets/textures/ui_related/UI_FR_2.png" id="3_mj8h7"]
+[ext_resource type="Texture2D" uid="uid://2qi0tbtw02u" path="res://assets/textures/icon/ICON_UI_PLAYB.png" id="4_55m2l"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="4_mj8h7"]
+[ext_resource type="Texture2D" uid="uid://bg55fe5ueqtd3" path="res://assets/textures/icon/ICON_UI_TRASHCAN.png" id="6_t6ycq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wl3mi"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_kpkvw")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.77057916, 0.5429904, 0.39971325, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpkvw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wl3mi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qaaj"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_kpkvw")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.44450063, 0.28717718, 0.18750128, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_55m2l"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("3_mj8h7")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+modulate_color = Color(0.44450063, 0.28717718, 0.18750128, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6ycq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_kpkvw")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b37ag"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("3_mj8h7")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+modulate_color = Color(1, 0, 0, 1)
+
+[node name="SaveSlotUI" type="Control" unique_id=1792262047 node_paths=PackedStringArray("data_yes", "data_no", "new_game_button", "play_button", "delete_button", "slot_label", "meta_label")]
+custom_minimum_size = Vector2(489.12, 69.53)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_o2kxc")
+script = ExtResource("2_b37ag")
+data_yes = NodePath("DataYes")
+data_no = NodePath("DataNo")
+new_game_button = NodePath("DataNo/NewGameButton")
+play_button = NodePath("DataYes/PlayButton")
+delete_button = NodePath("DataYes/DeleteButton")
+slot_label = NodePath("DataYes/SlotLabel")
+meta_label = NodePath("DataYes/MetaLabel")
+
+[node name="Background" type="Panel" parent="." unique_id=1194142638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wl3mi")
+
+[node name="DataYes" type="Control" parent="." unique_id=1768853672]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotLabel" type="Label" parent="DataYes" unique_id=263731014]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.71
+offset_top = -33.204998
+offset_right = 333.71
+offset_bottom = 8.795002
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kpkvw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wl3mi")
+text = "SLOT 1"
+
+[node name="MetaLabel" type="Label" parent="DataYes" unique_id=643275994]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.345
+offset_top = -44.54
+offset_right = 334.345
+offset_bottom = -2.540001
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kpkvw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wl3mi")
+text = "COMPANY LEVEL 1"
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="DataYes" unique_id=531117353]
+custom_minimum_size = Vector2(54.74, 54.74)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -103.35498
+offset_top = -29.099998
+offset_right = -48.61499
+offset_bottom = 25.640007
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5qaaj")
+icon = ExtResource("4_55m2l")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonHover" parent="DataYes/PlayButton" unique_id=753706803 instance=ExtResource("4_mj8h7")]
+
+[node name="DeleteButton" type="Button" parent="DataYes" unique_id=1667004749]
+custom_minimum_size = Vector2(54.74, 54.74)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -166.48499
+offset_top = -29.099998
+offset_right = -111.744995
+offset_bottom = 25.640007
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b37ag")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_b37ag")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_b37ag")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_b37ag")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_t6ycq")
+theme_override_styles/focus = SubResource("StyleBoxTexture_t6ycq")
+icon = ExtResource("6_t6ycq")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonHover" parent="DataYes/DeleteButton" unique_id=758551593 instance=ExtResource("4_mj8h7")]
+
+[node name="DataNo" type="Control" parent="." unique_id=18639567]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="DataNo" unique_id=79938682]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.71
+offset_top = -21.0
+offset_right = 333.71
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kpkvw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wl3mi")
+text = "NO SAVE DATA FOUND"
+
+[node name="NewGameButton" type="Button" parent="DataNo" unique_id=717081008]
+custom_minimum_size = Vector2(54.74, 54.74)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -103.35498
+offset_top = -29.099998
+offset_right = -48.61499
+offset_bottom = 25.640007
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_55m2l")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_5qaaj")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5qaaj")
+icon = ExtResource("3_5qaaj")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonHover" parent="DataNo/NewGameButton" unique_id=686137047 instance=ExtResource("4_mj8h7")]

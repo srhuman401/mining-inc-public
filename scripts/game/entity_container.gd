@@ -1,0 +1,2 @@
+class_name EntityContainer
+extends Node2D

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://bknkqx2411qg5"]
+
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="1_r4lsl"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_bin26"]
+
+[resource]
+script = ExtResource("2_bin26")
+display_name = "Twin Drill"
+icon_display_image = ExtResource("1_r4lsl")
+entity_id = 8
+placement_type = 0
+debug_name = "DOUBLE_DRILL"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

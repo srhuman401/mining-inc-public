@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://h4pb6m83crlw"]
+
+[ext_resource type="Script" uid="uid://c4uxbs5aqkigq" path="res://scripts/ui/game/game_ui_manager.gd" id="1_gwk6t"]
+[ext_resource type="PackedScene" uid="uid://cept2mocknjj2" path="res://scenes/ui/screen/hud.tscn" id="2_xjfbv"]
+[ext_resource type="PackedScene" uid="uid://bpgbhihjy5n23" path="res://scenes/ui/screen/base_upgrade.tscn" id="3_bma8u"]
+[ext_resource type="PackedScene" uid="uid://1hemxwm2bxm1" path="res://scenes/ui/screen/research_menu.tscn" id="4_fct72"]
+[ext_resource type="PackedScene" uid="uid://i8n5wrw6wit0" path="res://scenes/ui/screen/smelting.tscn" id="5_ru5ln"]
+[ext_resource type="PackedScene" uid="uid://dsvgku6o7bnp" path="res://scenes/ui/screen/selling.tscn" id="6_v1bdg"]
+[ext_resource type="Script" uid="uid://c3bp761qtok55" path="res://scripts/ui/game/selling/sell_ui.gd" id="7_qrkc0"]
+
+[node name="GameUIRoot" type="CanvasLayer" unique_id=295106819 node_paths=PackedStringArray("screen_holder", "popup_holder", "popup_background")]
+script = ExtResource("1_gwk6t")
+screen_holder = NodePath("Screens")
+popup_holder = NodePath("Popups")
+popup_background = NodePath("PopupUnderlay")
+
+[node name="Screens" type="Control" parent="." unique_id=1330014084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HUD" parent="Screens" unique_id=693281062 node_paths=PackedStringArray("ui_root") instance=ExtResource("2_xjfbv")]
+visible = false
+layout_mode = 1
+ui_root = NodePath("../..")
+
+[node name="BaseUpgrade" parent="Screens" unique_id=1683773245 node_paths=PackedStringArray("ui_root") instance=ExtResource("3_bma8u")]
+visible = false
+layout_mode = 1
+ui_root = NodePath("../..")
+
+[node name="ResearchMenu" parent="Screens" unique_id=1126606639 node_paths=PackedStringArray("ui_root") instance=ExtResource("4_fct72")]
+visible = false
+layout_mode = 1
+ui_root = NodePath("../..")
+
+[node name="Smelting" parent="Screens" unique_id=2090846678 node_paths=PackedStringArray("ui_root") instance=ExtResource("5_ru5ln")]
+visible = false
+layout_mode = 1
+ui_root = NodePath("../..")
+
+[node name="Selling" parent="Screens" unique_id=153670982 node_paths=PackedStringArray("ui_root") instance=ExtResource("6_v1bdg")]
+visible = false
+layout_mode = 1
+script = ExtResource("7_qrkc0")
+ui_root = NodePath("../..")
+
+[node name="Popups" type="Control" parent="." unique_id=1131429501]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="PopupUnderlay" type="Control" parent="." unique_id=1065213951]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="PopupUnderlay" unique_id=2085752825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.50980395)

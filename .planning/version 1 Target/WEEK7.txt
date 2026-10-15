@@ -1,0 +1,22 @@
+back to the grind after 1 week break or something
+cant wait for game to release
+need to get steam page up sometime this week (im procrasinating it)
+
+
+DAYS:
+- (M)ONDAY 	[ SKIPPED ]
+- (TU)ESDAY 	[ 5/5 ] I LOVE MY LIFE
+- (W)EDNESDAY 	[ 5/5 ] to eaaaaaasy
+- (TH)URSDAY 	[ 1/5 ] Took rest of day off to try get store page up
+- (F)RIDAY 	[ 4/5 ] count Thursday and Friday as the same day = 5 score
+
+TODO:
+- [-] (2) remake art for: furnace
+- [-] (1) adjust map to integrate lighting/shading
+- [W] (5) implement researching backend systems (almost upgrade copy and paste except its like smelting where it takes time to reward)
+- [F] (4) make research ui/researching functional
+- [TH] (1) create game icon
+- [-] (2) remake game title art
+- [TU] (1) remake tree texture
+- [TU] (1) make quit button work (very hard)
+- [TU] (3) add company name to slot metadata, add name prompt when creating slot, make it show name on slot ui when selecting

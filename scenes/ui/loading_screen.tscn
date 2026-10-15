@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cuihgsriiga1q"]
+
+[ext_resource type="PackedScene" uid="uid://cv77pvvasgffs" path="res://scenes/ui/loading_screen_ui.tscn" id="1_rqdcv"]
+
+[node name="LoadingScreen" type="Node2D" unique_id=1305724269]
+
+[node name="CanvasLayer" parent="." unique_id=1762082934 instance=ExtResource("1_rqdcv")]

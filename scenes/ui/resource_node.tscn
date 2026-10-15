@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bvsi6qvpbbt11"]
+
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="1_qdkm1"]
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="2_m3paj"]
+[ext_resource type="Script" uid="uid://dkmofur1l1dom" path="res://scripts/ui/resource_node.gd" id="2_ue3s6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg81g"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("1_qdkm1")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.5161391, 0.33816424, 0.22563553, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jg81g"]
+
+[node name="ResourceNode" type="Panel" unique_id=1206160230 node_paths=PackedStringArray("icon_texture", "resource_label", "amount_label")]
+custom_minimum_size = Vector2(0, 39.71)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jg81g")
+script = ExtResource("2_ue3s6")
+icon_texture = NodePath("IconTexture")
+resource_label = NodePath("ResourceLabel")
+amount_label = NodePath("AmountLabel")
+
+[node name="IconTexture" type="TextureRect" parent="." unique_id=1645325261]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 3.815
+offset_top = -18.0
+offset_right = 39.815
+offset_bottom = 18.0
+grow_vertical = 2
+texture = ExtResource("2_m3paj")
+expand_mode = 1
+
+[node name="ResourceLabel" type="Label" parent="." unique_id=187361647]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 58.44
+offset_top = -12.0
+offset_right = 181.00005
+offset_bottom = 12.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jg81g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jg81g")
+text = "DIAMOND ORE"
+
+[node name="AmountLabel" type="Label" parent="." unique_id=95046933]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -152.075
+offset_top = -12.0
+offset_right = -30.075073
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.8745098, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.8745098, 0, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jg81g")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jg81g")
+text = "100.1K"
+horizontal_alignment = 1
+vertical_alignment = 1

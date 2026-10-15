@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MapState" format=3 uid="uid://bu3a3yr13xuyp"]
+
+[ext_resource type="Script" uid="uid://biam43w22tv1f" path="res://scripts/game/entity_data.gd" id="1_bjio6"]
+[ext_resource type="Script" uid="uid://dn1krc5yr8212" path="res://scripts/map/map_definition.gd" id="1_qnmq3"]
+[ext_resource type="PackedScene" uid="uid://dalpcrcs72n6p" path="res://data/map_definitions/test_map/test_map.tscn" id="2_m5tt5"]
+
+[resource]
+script = ExtResource("1_qnmq3")
+from_tile_map = ExtResource("2_m5tt5")
+metadata/_custom_type_script = "uid://dn1krc5yr8212"

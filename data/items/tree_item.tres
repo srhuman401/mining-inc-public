@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://ba13d03aqaxcy"]
+
+[ext_resource type="Texture2D" uid="uid://csbietcjfrecy" path="res://assets/textures/entity/TREE_1.png" id="1_btey2"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_qooy7"]
+
+[resource]
+script = ExtResource("2_qooy7")
+display_name = "Tree Entity"
+icon_display_image = ExtResource("1_btey2")
+hidden = true
+entity_id = 7
+placement_type = 2
+debug_name = "tree"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

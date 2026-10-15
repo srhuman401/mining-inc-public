@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameItemInfo" format=3 uid="uid://hhegajxrb6j0"]
+
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="1_c336n"]
+[ext_resource type="Script" uid="uid://cypdc4p44psqf" path="res://scripts/resource/item_info.gd" id="2_naqrt"]
+
+[resource]
+script = ExtResource("2_naqrt")
+display_name = "Research Station"
+icon_display_image = ExtResource("1_c336n")
+entity_id = 9
+placement_type = 2
+debug_name = "RS1"
+metadata/_custom_type_script = "uid://cypdc4p44psqf"

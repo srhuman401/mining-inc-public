@@ -1,0 +1,19 @@
+3 day week cuz my lazy ass forgot to plan on sunday and monday
+and msmp5 is fun
+
+DAYS:
+- (M)ONDAY 	[ SKIPPED ]
+- (TU)ESDAY 	[ SKIPPED ]
+- (W)EDNESDAY 	[ 5/5 ] its gettign there!!!! 
+- (TH)URSDAY 	[ 5/5 ] 1 task to easy
+- (F)RIDAY 	[ 0/5 ] 
+
+TODO:
+- [-] (2) remake art for: furnace
+- [-] (1) adjust map to integrate lighting/shading
+- [W] (3) implement smelting backend systems
+- [TH] (5) make furnace ui/smelting functional
+- [W] (1) create upgrade for company level 1 (Tutorial Upgrade)
+- [W] (1) create upgrade for company level 2 (Unlock Drill T1)
+- [-] (3) implement researching backend systems (almost upgrade copy and paste)
+- [-] (3) make research ui/researching functional

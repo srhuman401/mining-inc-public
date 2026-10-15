@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://dsvgku6o7bnp"]
+
+[ext_resource type="Script" uid="uid://c3bp761qtok55" path="res://scripts/ui/game/selling/sell_ui.gd" id="1_eewjq"]
+[ext_resource type="PackedScene" uid="uid://bg33dutusycb7" path="res://scenes/ui/mat_element.tscn" id="2_eewjq"]
+[ext_resource type="PackedScene" uid="uid://dtsfkqu7ktt3l" path="res://scenes/ui/dark_background.tscn" id="3_k33r1"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="4_dss8t"]
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="5_3q0m8"]
+[ext_resource type="Script" uid="uid://bt3pmb8m1poou" path="res://scenes/ui/fix_scroll_flow_container.gd" id="6_71akf"]
+[ext_resource type="Texture2D" uid="uid://b1aoenspahhdn" path="res://assets/textures/icon/ICON_TRADE.png" id="7_s5j1o"]
+[ext_resource type="Script" uid="uid://c6t0i37inne46" path="res://scripts/ui/components/button_hover.gd" id="7_wd6v3"]
+[ext_resource type="Theme" uid="uid://co1uyaxwok2kw" path="res://assets/ui_or_styling/button/col_red_btn.tres" id="8_3k73m"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="9_bxjfi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_owbwo"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_3q0m8")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.5400761, 0.3555004, 0.23889899, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owbwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s5j1o"]
+
+[node name="Selling" type="Control" unique_id=153670982 node_paths=PackedStringArray("close_btn", "sell_box_container", "storage_box_container", "sell_value", "sell_multiplier", "max_toggle_btn", "sell_btn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eewjq")
+material_scene = ExtResource("2_eewjq")
+color_red = Color(1, 0, 0, 1)
+color_green = Color(0, 1, 0, 1)
+close_btn = NodePath("Popup/Close")
+sell_box_container = NodePath("Popup/SellItems/ScrollContainer/FlowContainer")
+storage_box_container = NodePath("Popup/Storage/ScrollContainer/FlowContainer")
+sell_value = NodePath("Popup/SellTotalValue")
+sell_multiplier = NodePath("Popup/SellMultiplier")
+max_toggle_btn = NodePath("Popup/MaxToggle")
+sell_btn = NodePath("Popup/SellButton")
+screen_id = 7
+metadata/_custom_type_script = "uid://bx7sl05j6gi7g"
+
+[node name="DarkBackground" parent="." unique_id=1748504873 instance=ExtResource("3_k33r1")]
+layout_mode = 1
+
+[node name="Popup" type="Control" parent="." unique_id=77332977]
+custom_minimum_size = Vector2(961.6, 586.32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.8
+offset_top = -402.0
+offset_right = 480.80005
+offset_bottom = 392.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_dss8t")
+
+[node name="Background" type="Panel" parent="Popup" unique_id=1330707034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close" type="Button" parent="Popup" unique_id=1564525724]
+custom_minimum_size = Vector2(65.67, 65.67)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -35.11493
+offset_top = -23.600006
+offset_right = 30.555054
+offset_bottom = 42.069992
+grow_horizontal = 0
+theme = ExtResource("8_3k73m")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "X"
+
+[node name="ButtonHover" parent="Popup/Close" unique_id=753706803 instance=ExtResource("9_bxjfi")]
+
+[node name="SellItems" type="Panel" parent="Popup" unique_id=850908451]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -426.80005
+offset_top = -309.0
+offset_right = -60.80005
+offset_bottom = 178.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_owbwo")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup/SellItems" unique_id=303073662]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_71akf")
+
+[node name="FlowContainer" type="FlowContainer" parent="Popup/SellItems/ScrollContainer" unique_id=679596555]
+layout_mode = 2
+size_flags_horizontal = 3
+last_wrap_alignment = 1
+
+[node name="Storage" type="Panel" parent="Popup" unique_id=943062961]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 37.799988
+offset_top = -310.0
+offset_right = 403.8
+offset_bottom = 248.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_owbwo")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup/Storage" unique_id=88352298]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_71akf")
+
+[node name="FlowContainer" type="FlowContainer" parent="Popup/Storage/ScrollContainer" unique_id=1471235813]
+layout_mode = 2
+size_flags_horizontal = 3
+last_wrap_alignment = 1
+
+[node name="Label" type="Label" parent="Popup" unique_id=196528651]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 131.00003
+offset_top = -364.0
+offset_right = 325.00003
+offset_bottom = -305.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxEmpty_owbwo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5j1o")
+text = "SELL BOX"
+
+[node name="Label2" type="Label" parent="Popup" unique_id=411914621]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.00003
+offset_top = -365.0
+offset_right = -153.00003
+offset_bottom = -306.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxEmpty_owbwo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5j1o")
+text = "STORAGE"
+
+[node name="SellMultiplier" type="Label" parent="Popup" unique_id=2035021415]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.00003
+offset_top = 257.0
+offset_right = -76.00003
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_owbwo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5j1o")
+text = "1.0x Sell Multiplier"
+
+[node name="SellTotalValue" type="Label" parent="Popup" unique_id=2144956312]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 158.99997
+offset_top = 271.0
+offset_right = 281.99997
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_owbwo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5j1o")
+text = "Total: 0$"
+
+[node name="TextureRect" type="TextureRect" parent="Popup" unique_id=925867924]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -141.0
+offset_right = 24.00003
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_s5j1o")
+expand_mode = 1
+
+[node name="MaxToggle" type="Button" parent="Popup" unique_id=250741604]
+layout_mode = 0
+offset_left = 22.799988
+offset_top = 650.0
+offset_right = 108.79999
+offset_bottom = 674.0
+theme = ExtResource("4_dss8t")
+text = "MAX"
+
+[node name="UIButtonHover" type="Node" parent="Popup/MaxToggle" unique_id=2006950801]
+script = ExtResource("7_wd6v3")
+metadata/_custom_type_script = "uid://c6t0i37inne46"
+
+[node name="SellButton" type="Button" parent="Popup" unique_id=1640931268]
+modulate = Color(0.14901961, 1, 0, 1)
+layout_mode = 0
+offset_left = 634.8
+offset_top = 602.0
+offset_right = 762.8
+offset_bottom = 654.0
+theme = ExtResource("4_dss8t")
+theme_override_font_sizes/font_size = 37
+text = "SELL"
+
+[node name="UIButtonHover" type="Node" parent="Popup/SellButton" unique_id=1808192695]
+script = ExtResource("7_wd6v3")
+metadata/_custom_type_script = "uid://c6t0i37inne46"

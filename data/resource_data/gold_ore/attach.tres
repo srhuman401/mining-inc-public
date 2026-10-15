@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://c8y31rivtarn0"]
+
+[ext_resource type="Resource" uid="uid://bevnhc6ixhmxq" path="res://data/resource_data/gold_ore/display.tres" id="1_kvttk"]
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="2_oxsg2"]
+[ext_resource type="Resource" uid="uid://d081pb3ajgxtg" path="res://data/resource_data/gold_ore/smelt.tres" id="3_mn7h1"]
+
+[resource]
+script = ExtResource("2_oxsg2")
+for_resource_enum = 7
+smelt_behaviour = ExtResource("3_mn7h1")
+display_behaviour = ExtResource("1_kvttk")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

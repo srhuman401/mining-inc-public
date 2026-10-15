@@ -1,0 +1,40 @@
+week 1 (missed monday)
+
+Monday:
+	Skip
+Tuesday [COMPLETE]:
+	Make placement ghost work [x]
+	(Possibly make placement work? no need for validation) [x] (im so good)
+	begin audio/sfx manager [x] (finished)
+	create art for drill tier 2 [x]
+	(maybe create art for furnace?) [skipped]
+Wednesday [COMPLETE]:
+	Make placement work (add validation if not already) [x] (hell yeah)
+	Begin ui manager (control ui state and popups) [x]
+	finish audio/sfx manager [skip (already done)]
+	Create art for furnace if havent already [x]
+	Create art for the selling station (to sell shit) [skipped]
+Thursday [COMPLETE]:
+	[x] Make upgrading work (doesnt matter if messy, js make it work using the BaseUpgrade resources) (no need for gui, keybind to debug)
+	Implement drill tier 2 (if havent) [x]
+	Implement the selling station (doesnt need functionality) [x] (hell yeah)
+	(if needed implement entity manager to .get_entities_of_type() > int(handle) [x]
+	implement Bronze Ore/Resource [x]
+	Create art for icons for: Money, Coal, and Bronze [2/3, do bronze on friday]
+	Create art for Bronze ore [skip]
+Friday [COMPLETE]:
+	[x] (leftover from yesterday: Create art for, bronze ore, bronze icon)
+	[x] look for some basic sounds for mining, clicking, and hovering and add them.
+	[skip (next week, particles are confusing)] figure out how to implement particles (and try add mining particles)
+	[skip, do next week] plan UIdesign for the game, maybe make some basic prototypes?
+	[skip, do next week] think of naming ideas for the game (or just go with 'Mining Game' if ur that lazy)
+	[x] Begin expanding the map (add areas for bronze ore, think progression wise)
+	[x] [added, not in original plan] Simple loading screen
+Saturday/Sunday:
+	Playtest the game and any added mechanics
+	If any bugs: try fix them, push them to next week if cant
+	Otherwise: make sure the game is playing well
+	Take a break
+	Create plan/outline for WEEK2
+
+WEEK 1: COMPLETE, Now for week 2. This game is coming together.

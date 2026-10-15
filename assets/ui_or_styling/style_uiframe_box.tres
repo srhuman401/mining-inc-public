@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cuxej8s2whv4q"]
+
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="1_b4rdg"]
+
+[resource]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("1_b4rdg")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0

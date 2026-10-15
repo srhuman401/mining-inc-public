@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://boqb85cg8o20o"]
+
+[ext_resource type="Texture2D" uid="uid://bsegjqqaqt4nm" path="res://assets/textures/entity/drill_textures/TIER0_DRL_SPR_SH.png" id="1_3rxc5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2y55"]
+atlas = ExtResource("1_3rxc5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3phpk"]
+atlas = ExtResource("1_3rxc5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2vyjl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2y55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3phpk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DrillTier0Visual" type="AnimatedSprite2D" unique_id=2108175458]
+sprite_frames = SubResource("SpriteFrames_2vyjl")
+frame_progress = 0.36420137
+offset = Vector2(16, 16)

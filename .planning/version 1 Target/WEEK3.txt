@@ -1,0 +1,31 @@
+week 3 (week 2 was a success)
+this week will focus on item additions, polishing, and UI/UX.
+this week is straight forward and simple, the game is in its final stretch towards release.
+next week might focus on getting a Steam page ready. (if unable; resort to Itch.io for a free demo release)
+if atleast 3 tasks are done per week, its a success.
+
+Monday [X]:
+- Skipped, needed a break
+
+Tuesday [X]:
+- [X] create ui for Upgrading Base (doesnt need functionality)
+- [X] implement trees (basically entities)
+- [X] research ui transitions in godot and try to implement them in a modular way (hide old frame imediately but smooth in new frame)
+- [X] create art for tiles: sand, water top, and water
+
+Wednesday []:
+- [X] create ui for Researching (basically clone of upgrading base UI)
+- [] figure out how to implement a sky (so that it looks good)
+- [NO] create art for researching bench (cancelled)
+
+Thursday []:
+- [X] make upgrading base ui functional (display requirements, rewards, and make it work)
+- [] create art for: clouds, and sky background (daytime)
+- [] create basic UI for list of resources amounts (very simple, icon > name > amount in a vbox list)
+- [] create art for double drill (drill with 2 drill things, fast rate but low damage)
+
+Friday []:
+- [] implement items: double drill, and researching bench
+- [] try to implement sky using research from Thursday
+- [] implement rookdv start screen
+- [] create art for: gold ore, gold ingot, and gold ore (icon)

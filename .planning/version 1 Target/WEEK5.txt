@@ -1,0 +1,21 @@
+3 day week, didnt get to plan on weekend
++ msmp5
+
+DAYS:
+- (M)ONDAY 	[ SKIPPED ]
+- (TU)ESDAY 	[ SKIPPED ]
+- (W)EDNESDAY 	[ 5/5 ] easy
+- (TH)URSDAY 	[ 7/5 ] IM THE BEST
+- (F)RIDAY 	[ 5/5 ] week 5 sdoen
+
+TODO:
+- [TH] (2) remake art for: grass and dirt tiles
+- [TH] (2) remake art for: sand tiles
+- [W] (3) create system for baked/premade lighting for maps
+- [TH] (3) create art for: map lighting/shading tiles: FULL,T_LEFT_CORNER,B_LEFT_CORNER, etc.
+- [-] (2) remake art for: furnace
+- [W] (1) implement gold resource
+- [W] (1) adjust map to integrate gold
+- [-] (1) adjust map to integrate lighting/shading
+- [F] (2) create art for: front mountains (since it currently uses recoloured back mountains)
+- [F] (3) create basic UI for furnace / smelting

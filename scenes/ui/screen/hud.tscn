@@ -1,0 +1,474 @@
+[gd_scene format=3 uid="uid://cept2mocknjj2"]
+
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="1_a743p"]
+[ext_resource type="Script" uid="uid://cch6ot3dmlmge" path="res://scripts/ui/game/hud.gd" id="1_pte5l"]
+[ext_resource type="Texture2D" uid="uid://ctydvivy06yks" path="res://assets/textures/icon/ICON_RESOURCES.png" id="3_o6qtu"]
+[ext_resource type="Texture2D" uid="uid://b3ream236cmsa" path="res://assets/textures/icon/ICON_BASE.png" id="4_jjvxi"]
+[ext_resource type="Texture2D" uid="uid://58cu4rdmit8r" path="res://assets/textures/icon/ICON_MENU.png" id="5_ay3ko"]
+[ext_resource type="Texture2D" uid="uid://iwo8wtf4smqv" path="res://assets/textures/icon/ICON_RESEARCH.png" id="5_j3f7n"]
+[ext_resource type="Texture2D" uid="uid://crpfgb7tx71aq" path="res://assets/textures/icon/ICON_MANAGE.png" id="6_57n3m"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="6_j821o"]
+[ext_resource type="Script" uid="uid://cje74spa5cyha" path="res://scripts/ui/resources_button.gd" id="6_jg81g"]
+[ext_resource type="Texture2D" uid="uid://cngavd7y55hn0" path="res://assets/textures/icon/ICON_MONEY.png" id="7_4n8dx"]
+[ext_resource type="Texture2D" uid="uid://bx14gqvc4a66d" path="res://assets/textures/icon/ICON_UI_CRAFTING_02.png" id="7_j3f7n"]
+[ext_resource type="StyleBox" uid="uid://d1uryvrv0mjr8" path="res://assets/ui_or_styling/style_br_uifbox.tres" id="8_8spu4"]
+[ext_resource type="StyleBox" uid="uid://fuk0md6hcrkd" path="res://assets/ui_or_styling/style_br_uifbox_pressed.tres" id="9_j821o"]
+[ext_resource type="Script" uid="uid://bidvdnj7fm4y1" path="res://scripts/ui/screenui_screen_button.gd" id="9_yg4x1"]
+[ext_resource type="Script" uid="uid://b8ibqqfg6cnrf" path="res://scripts/ui/game/pause_button.gd" id="12_ih0p2"]
+[ext_resource type="PackedScene" uid="uid://bvsi6qvpbbt11" path="res://scenes/ui/resource_node.tscn" id="14_vyea2"]
+[ext_resource type="Script" uid="uid://bpe38iybt7kq2" path="res://scripts/ui/resources_display.gd" id="15_pwkbb"]
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="18_fmnsf"]
+[ext_resource type="Script" uid="uid://cst82r1sidqex" path="res://scripts/ui/pickaxe_display.gd" id="18_kn6yg"]
+[ext_resource type="Script" uid="uid://c6t0i37inne46" path="res://scripts/ui/components/button_hover.gd" id="20_mqyrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ih0p2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vyea2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmnsf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kn6yg"]
+
+[node name="HUD" type="Control" unique_id=693281062]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pte5l")
+screen_id = 1
+
+[node name="Sidebar" type="Control" parent="." unique_id=1285366726]
+custom_minimum_size = Vector2(157.61, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sidebar" unique_id=2089611122]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Resources" type="Button" parent="Sidebar/VBoxContainer" unique_id=1744205298 node_paths=PackedStringArray("toggle_frame")]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("3_o6qtu")
+expand_icon = true
+script = ExtResource("6_jg81g")
+toggle_frame = NodePath("../../../ResourcesDisplay")
+
+[node name="ButtonHover" parent="Sidebar/VBoxContainer/Resources" unique_id=753706803 instance=ExtResource("6_j821o")]
+
+[node name="Upgrade" type="Button" parent="Sidebar/VBoxContainer" unique_id=892764829 node_paths=PackedStringArray("screen_ui")]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("4_jjvxi")
+expand_icon = true
+script = ExtResource("9_yg4x1")
+screen_ui = NodePath("../../..")
+set_to = 2
+
+[node name="ButtonHover" parent="Sidebar/VBoxContainer/Upgrade" unique_id=263331279 instance=ExtResource("6_j821o")]
+
+[node name="Research" type="Button" parent="Sidebar/VBoxContainer" unique_id=534685306 node_paths=PackedStringArray("screen_ui")]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("5_j3f7n")
+expand_icon = true
+script = ExtResource("9_yg4x1")
+screen_ui = NodePath("../../..")
+set_to = 6
+
+[node name="ButtonHover" parent="Sidebar/VBoxContainer/Research" unique_id=1017591462 instance=ExtResource("6_j821o")]
+
+[node name="Crafting" type="Button" parent="Sidebar/VBoxContainer" unique_id=46859381]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("7_j3f7n")
+expand_icon = true
+
+[node name="ButtonHover" parent="Sidebar/VBoxContainer/Crafting" unique_id=473929193 instance=ExtResource("6_j821o")]
+
+[node name="Manage" type="Button" parent="Sidebar/VBoxContainer" unique_id=1593639086 node_paths=PackedStringArray("toggle_frame")]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("6_57n3m")
+expand_icon = true
+script = ExtResource("6_jg81g")
+toggle_frame = NodePath("../../../SubDisplay")
+
+[node name="ButtonHover" parent="Sidebar/VBoxContainer/Manage" unique_id=1207122019 instance=ExtResource("6_j821o")]
+
+[node name="PauseButton" type="Button" parent="." unique_id=570717373]
+custom_minimum_size = Vector2(131.225, 134.82)
+layout_mode = 0
+offset_left = 11.09
+offset_top = 11.08
+offset_right = 142.315
+offset_bottom = 145.90001
+size_flags_horizontal = 4
+theme = ExtResource("1_a743p")
+theme_override_styles/normal = ExtResource("8_8spu4")
+theme_override_styles/normal_mirrored = ExtResource("8_8spu4")
+theme_override_styles/pressed = ExtResource("9_j821o")
+theme_override_styles/pressed_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover = ExtResource("8_8spu4")
+theme_override_styles/hover_mirrored = ExtResource("8_8spu4")
+theme_override_styles/hover_pressed = ExtResource("9_j821o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_j821o")
+theme_override_styles/disabled = ExtResource("8_8spu4")
+theme_override_styles/disabled_mirrored = ExtResource("8_8spu4")
+theme_override_styles/focus = ExtResource("8_8spu4")
+icon = ExtResource("5_ay3ko")
+expand_icon = true
+script = ExtResource("12_ih0p2")
+
+[node name="ButtonHover" parent="PauseButton" unique_id=1694718353 instance=ExtResource("6_j821o")]
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=820410349]
+self_modulate = Color(0.77057916, 0.5429904, 0.39971325, 1)
+custom_minimum_size = Vector2(477.865, 92.01)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.73
+offset_top = -103.08002
+offset_right = 488.595
+offset_bottom = -11.069336
+grow_vertical = 0
+theme = ExtResource("1_a743p")
+theme_override_font_sizes/font_size = 60
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MoneyLabel" unique_id=1261622801]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.965
+offset_top = -56.92535
+offset_right = 104.49162
+offset_bottom = 35.039673
+grow_vertical = 2
+texture = ExtResource("7_4n8dx")
+expand_mode = 1
+
+[node name="ResourcesDisplay" type="Control" parent="." unique_id=1346688081 node_paths=PackedStringArray("vbox_cont")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -541.0
+offset_top = 39.0
+offset_right = -161.26501
+offset_bottom = 287.29993
+grow_horizontal = 0
+theme = ExtResource("1_a743p")
+script = ExtResource("15_pwkbb")
+node_scene = ExtResource("14_vyea2")
+vbox_cont = NodePath("Control/ScrollContainer/VBoxContainer")
+
+[node name="Panel" type="Panel" parent="ResourcesDisplay" unique_id=2138616359]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ResourcesDisplay" unique_id=691766261]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ih0p2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vyea2")
+text = "RESOURCES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="ResourcesDisplay" unique_id=509608797]
+custom_minimum_size = Vector2(0, 216.145)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ResourcesDisplay/Control" unique_id=1075106854]
+custom_minimum_size = Vector2(373.14, 209.02)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ResourcesDisplay/Control/ScrollContainer" unique_id=268845687]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="PickaxeDisplay" type="Control" parent="." unique_id=739843190 node_paths=PackedStringArray("tooltip", "name_label", "damage_label", "pickaxe_texture")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -265.78497
+offset_right = 156.0
+offset_bottom = -116.78522
+grow_vertical = 0
+theme = ExtResource("1_a743p")
+script = ExtResource("18_kn6yg")
+tooltip = NodePath("Tooltip")
+name_label = NodePath("Tooltip/NameLabel")
+damage_label = NodePath("Tooltip/DamageLabel")
+pickaxe_texture = NodePath("PickaxeTexture")
+
+[node name="Panel" type="Panel" parent="PickaxeDisplay" unique_id=1759159644]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PickaxeTexture" type="TextureRect" parent="PickaxeDisplay" unique_id=11173216]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -0.2199707
+offset_right = -4.0
+offset_bottom = -12.439697
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_fmnsf")
+
+[node name="Tooltip" type="Control" parent="PickaxeDisplay" unique_id=1618464250]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.6600037
+offset_top = -81.21973
+offset_right = 226.0
+offset_bottom = 0.00022888184
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="PickaxeDisplay/Tooltip" unique_id=1636092540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="PickaxeDisplay/Tooltip" unique_id=909597781]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fmnsf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kn6yg")
+text = "PICKAXENAME PICKAXE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamageLabel" type="Label" parent="PickaxeDisplay/Tooltip" unique_id=1776191906]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -14.609985
+offset_bottom = 29.390015
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fmnsf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kn6yg")
+text = "100 DAMAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubDisplay" type="Control" parent="." unique_id=917441000]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.43372
+offset_top = -163.57498
+offset_right = 325.43372
+offset_bottom = 163.57498
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_a743p")
+
+[node name="Panel" type="Panel" parent="SubDisplay" unique_id=506958324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SubDisplay" unique_id=1359062872]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ih0p2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vyea2")
+text = "MANAGE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="SubDisplay" unique_id=847839562]
+custom_minimum_size = Vector2(0, 216.145)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubDisplay/Control" unique_id=541929150]
+custom_minimum_size = Vector2(344.82, 209.02)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.99997
+offset_top = -186.50244
+offset_right = 319.0
+offset_bottom = 102.49757
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SubDisplay/Control/ScrollContainer" unique_id=540639468]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="OpenSmelting" type="Button" parent="SubDisplay/Control/ScrollContainer/VBoxContainer" unique_id=844710076 node_paths=PackedStringArray("screen_ui")]
+custom_minimum_size = Vector2(0, 44.245)
+layout_mode = 2
+text = "SMELTING"
+script = ExtResource("9_yg4x1")
+screen_ui = NodePath("../../../../..")
+set_to = 5
+
+[node name="UIButtonHover" type="Node" parent="SubDisplay/Control/ScrollContainer/VBoxContainer/OpenSmelting" unique_id=1199938642]
+script = ExtResource("20_mqyrj")
+metadata/_custom_type_script = "uid://c6t0i37inne46"
+
+[node name="OpenSelling" type="Button" parent="SubDisplay/Control/ScrollContainer/VBoxContainer" unique_id=1752161143 node_paths=PackedStringArray("screen_ui")]
+custom_minimum_size = Vector2(0, 44.245)
+layout_mode = 2
+text = "SELL"
+script = ExtResource("9_yg4x1")
+screen_ui = NodePath("../../../../..")
+set_to = 7
+
+[node name="UIButtonHover" type="Node" parent="SubDisplay/Control/ScrollContainer/VBoxContainer/OpenSelling" unique_id=1475160599]
+script = ExtResource("20_mqyrj")
+metadata/_custom_type_script = "uid://c6t0i37inne46"

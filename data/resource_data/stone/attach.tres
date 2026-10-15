@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://b5wljbgymoksv"]
+
+[ext_resource type="Resource" uid="uid://53k177u7jdjl" path="res://data/resource_data/stone/display.tres" id="1_g6y03"]
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="2_3fsda"]
+[ext_resource type="Resource" uid="uid://di1mg8lpbb58b" path="res://data/resource_data/stone/sell.tres" id="3_t62nx"]
+[ext_resource type="Resource" uid="uid://dwbrog6k370ty" path="res://data/resource_data/stone/smelt.tres" id="4_ejuht"]
+
+[resource]
+script = ExtResource("2_3fsda")
+for_resource_enum = 24
+smelt_behaviour = ExtResource("4_ejuht")
+display_behaviour = ExtResource("1_g6y03")
+sell_behaviour = ExtResource("3_t62nx")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResourceDisplayInfo" format=3 uid="uid://n280phm0sle8"]
+
+[ext_resource type="Texture2D" uid="uid://celjdwqcjxb1b" path="res://assets/textures/icon/ICON_BRONZE.png" id="1_7pxt1"]
+[ext_resource type="Script" uid="uid://birkbon5c8x" path="res://scripts/resource/resource_display_data.gd" id="2_yp1y4"]
+
+[resource]
+script = ExtResource("2_yp1y4")
+display_name = "Bronze"
+image = ExtResource("1_7pxt1")
+list_display_order = 4
+show_in_resource_list = true
+metadata/_custom_type_script = "uid://birkbon5c8x"

@@ -1,0 +1,70 @@
+'Mining Game' (temporary title) is a mix between idle and management.
+
+Title: "Mining INC.", final title.
+
+Generic Plot:
+	You arrive on an island and seek your hopes and dreams of
+	running a massive mining corporation. These are your humble beginnings.
+
+Gameplay:
+	Player Involvement:
+	Mine ores by clicking on them will damage then depending
+	on your current pickaxe (can be upgraded via base upgrades)
+	Place stations / items to expand, items are not player interactive.
+	They solely add values;
+	 for example: more furnaces = higher max smelting capacity.
+	
+	Players navigate ui menus to execute tasks like:
+		Smelting,
+		Base Upgrading,
+		Researching,
+		Placement,
+		Selling,
+	But can eventually employ workers to execute most tasks for them, like smelting and selling.
+	
+	Base Upgrading:
+		Base Upgrading (or just, Upgrading) follows a linear path, it gradually increases in difficulty to upgrade
+		by expanding its wide varity of requirements of resources as the player upgrades.
+		
+		Upgrading shows a visual difference in the players 'base' / company base, 
+		with it visually starting as a tent, eventually evolving into a cabin or more.
+		
+		Base upgrading will not just be visual however, it can:
+			- Unlock items(to craft)
+			- Expand play area (in width)
+			- And more.
+		Base upgrading can only be done manually.
+
+	Researching:
+		Researching is, similar to base upgrading, a linear path. It is not a skill tree.
+		It also gradually increases in difficulty to purchase as research levels up.	
+
+		Researching allows you to discover the secrets of the island, it does not visually change the appearance of
+		the company base or itself. And must be placed (only unlocked at Level 2 or 3)
+		
+		Typically it will cost more to research and take more time to complete (while base upgrades
+		are almost instant), 		
+
+		It can unlock:
+			- Expansion of play area (in height)
+			- More items(to craft, may be more powerful then base upgrade ones)
+	Notes: 
+		Base Upgrading unlocks width to represent the expansion of your company,
+		Research unlocks depth to represent the exploration of the islands secrets.
+		
+		Both must be used together to truly expand your rule across the island, 	
+		width will allow you to get more quantity (further = more ORES)
+		but depth allows for more quality (deeper = better ORES)
+	
+	Gameplay Loop:
+		Until you unlock drills and other automations (workers):
+			Mine / Chop,
+			Manage (Craft, Upgrade, Reserach, Smelt, Sell)
+		Generically:
+			Mine ores -> resources,
+			smelt or refine ores (depends on type) -> sellables
+			sell them -> money
+
+	Side Features:
+		Trees: spawn across the map, they can be mined manually or a worker can be employed to do it
+		they are an essential resource for crafting many things. They regenerate.

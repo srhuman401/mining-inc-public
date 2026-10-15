@@ -1,0 +1,16 @@
+WEEK 9
+simple week this week. Not a lot. Selling will be finished (YAY) which means that the game loop will be entirely playable; all that's needed is placement / building after this week. 
+
+DAYS:
+- MON [ SKIPPED ] <- skipped for planning. And I don't do Mondays anyways
+- TUE [ 5/5 ] Mario told me to say HI. H!? Oh boy. Look bud, I ain't say much to one of 'em wise faces, but if 'ou really 'oughta know... 
+- WED [ 0/5 ] 
+- THU [ 0/5 ] 
+- FRI [ 0/5 ]
+
+TODO:
+- [-] (3) remake furnace art to match new style
+- [TUE] (5) create selling UI for selling items (no functionality)
+- [-] (5) make selling UI functional (dependent on above task)
+- [-] (2) fix mining particle effects to be for drills only
+- [-] (5) create data for all current resources that are sorta balanced and have visuals. Also make UI use the new resourceData db system instead of hardcoded values for visuals and etc.

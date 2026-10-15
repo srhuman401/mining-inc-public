@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SmeltingConfig" format=3 uid="uid://bxikv36ovop5r"]
+
+[ext_resource type="Script" uid="uid://bhudvqgfp12xy" path="res://scripts/game/smelting/res_smelting_config.gd" id="1_e1jdy"]
+
+[resource]
+script = ExtResource("1_e1jdy")
+config = Dictionary[int, int]({
+3: 4,
+5: 6,
+7: 8
+})
+fuel_config = Dictionary[int, int]({
+1: 4,
+2: 8
+})
+metadata/_custom_type_script = "uid://bhudvqgfp12xy"

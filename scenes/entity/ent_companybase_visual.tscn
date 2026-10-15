@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5senjjbd2rqo"]
+
+[ext_resource type="Texture2D" uid="uid://blx0e4sxuc8c0" path="res://assets/textures/house/COMPANY_B_HOUSE.png" id="1_sws2i"]
+[ext_resource type="Texture2D" uid="uid://gwk24jgww1oc" path="res://assets/textures/house/COMPANY_B_TENT.png" id="2_o4y04"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvwlv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o4y04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_sws2i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="BaseVisual" type="AnimatedSprite2D" unique_id=2108175458]
+sprite_frames = SubResource("SpriteFrames_mvwlv")
+centered = false
+offset = Vector2(-80, -63.5)

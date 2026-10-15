@@ -1,0 +1,18 @@
+Development has been chaotic recently. Im going to just start writing about stuff, instead of big plans or to-do lists.
+
+
+This week, im going to try and create the underlying framework for Employees, which will probably be this game's best feat. 
+
+The implementation will be similar to all other behaviour-driven objects in Mining INC. 
+This is not actually WEEK 11 of development as the file name suggests, more like 15 or 13, something like that. I've done a lot that has been undocumented. 
+
+My new goal is to get the demo finished before GTA 6 releases, so before November ideally. Not is this just because I want to play GTA 6,
+but also because it's a good goal to set, with the demo being finished I can get screenshots and create a trailer for the steam page. In preparation for my goal of the demo's release in February to go with the first Steam next fest of 2027, hopefully getting wishlists.  
+
+I don't know if I really see financial success in this game, it probably wont be great, nor do I expect much wishlists or purchases. 
+I might've overscoped, but that I have come all this way is amazing.
+
+
+Creating employees will probably be a difficult task, they will react when being underpaid or overpaid, over employees will react aswell to how you treat their co-workers compared to them. Overworked, they will be tired. They need breaks, good management, and a good boss (the player). 
+
+It's crazy how much effort goes into making a game, that isn't the content of the game itself; the marketing, the steam page, the socials, Etc. I had no idea it was like all this, I hope I can use Mining INC. as a learning process for future games; even if it isn't successful itself. 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlayConfiguration" format=3 uid="uid://ctm0gdax7phvu"]
+
+[ext_resource type="Resource" uid="uid://bu3a3yr13xuyp" path="res://data/map_definitions/test_map/data.tres" id="1_2gvl0"]
+[ext_resource type="Script" uid="uid://b21becg5cgt5r" path="res://scripts/resource/play_config.gd" id="1_uvuf0"]
+
+[resource]
+script = ExtResource("1_uvuf0")
+main_map = ExtResource("1_2gvl0")
+metadata/_custom_type_script = "uid://b21becg5cgt5r"

@@ -1,0 +1,87 @@
+class_name GameEnum
+
+enum TileType 
+{
+	EMPTY, 
+	STONE,
+	TEXTURE_00,
+	TEXTURE_01,
+	COAL_ORE,
+	DIRT,
+	GRASS,
+	FOREGROUND_STONE,
+	MARKER_TREE,
+	MARKER_SPAWN_LOC,
+	BRONZE_ORE,
+	IRON_ORE,
+	SAND,
+	WATER_TOP,
+	WATER,
+	GOLD_ORE,
+	STONE_ORE,
+}
+
+enum Entity
+{
+	TEST_ENT,
+	DRILL_T0,
+	CO_BASE,
+	DRILL_T1,
+	SELL_STATION,
+	FURNACE_1,
+	DRILL_T2,
+	TREE,
+	DRILL_DOUBLE,
+	RESEARCH_STATION,
+}
+
+enum PickaxeType
+{
+	MAKESHIFT,
+	STONE,
+	ADVANCED,
+	FINECRAFTED,
+	TECH,
+}
+
+enum ResourceType 
+{
+	# GENERAL:
+	CURRENCY_MONEY,
+	COAL_RAW,
+	WOOD_LOG,
+	
+	# BRONZE:
+	BRONZE_ORE,
+	BRONZE_INGOT,
+	
+	# IRON:
+	IRON_ORE,
+	IRON_INGOT,
+	
+	# GOLD:
+	GOLD_ORE,
+	GOLD_INGOT,
+	
+	# EXTRA:
+	ENERGY,
+	POWER_SHARD,
+	POWER_CRYSTAL,
+	
+	# MODDABLE:
+	_01,
+	_02,
+	_03,
+	_04,
+	_05,
+	_06,
+	_07,
+	_08,
+	_09,
+	_10,
+	_11,
+	_12,
+	
+	# STONE:
+	STONE,
+}

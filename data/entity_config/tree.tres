@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EntityDataConfig" format=3 uid="uid://b7qyo22rfckfs"]
+
+[ext_resource type="PackedScene" uid="uid://cnkjuyqn74dnm" path="res://scenes/entity/ent_tree_visual.tscn" id="1_l2yjv"]
+[ext_resource type="Script" uid="uid://5sogwl0ngmt7" path="res://scripts/resource/entity_resource_config.gd" id="2_060qu"]
+
+[resource]
+script = ExtResource("2_060qu")
+attach_entity_enum = 7
+entity_behaviour_path = "misc/tree_behv.gd"
+entity_visual_scene = ExtResource("1_l2yjv")
+occupy_tile_offsets = Array[Vector2i]([Vector2i(0, 0), Vector2i(0, -1), Vector2i(0, -2)])
+metadata/_custom_type_script = "uid://5sogwl0ngmt7"

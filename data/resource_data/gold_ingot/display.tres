@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameResourceDisplayInfo" format=3 uid="uid://cl3g4sfiet8f2"]
+
+[ext_resource type="Texture2D" uid="uid://dhvb35hpayvcr" path="res://assets/textures/icon/ICON_INGOT_GOLD.png" id="1_mslq1"]
+[ext_resource type="Script" uid="uid://birkbon5c8x" path="res://scripts/resource/resource_display_data.gd" id="2_abcyp"]
+
+[resource]
+script = ExtResource("2_abcyp")
+display_name = "Gold Ingot"
+image = ExtResource("1_mslq1")
+list_display_order = 8
+show_in_resource_list = true
+metadata/_custom_type_script = "uid://birkbon5c8x"

@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://bpgbhihjy5n23"]
+
+[ext_resource type="Script" uid="uid://caqgqalt1ar32" path="res://scripts/ui/game/base_upgrade.gd" id="1_lo1t2"]
+[ext_resource type="PackedScene" uid="uid://dtsfkqu7ktt3l" path="res://scenes/ui/dark_background.tscn" id="1_lxu17"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="2_k612n"]
+[ext_resource type="Theme" uid="uid://co1uyaxwok2kw" path="res://assets/ui_or_styling/button/col_red_btn.tres" id="3_0vrxf"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="4_tf3nt"]
+[ext_resource type="Theme" uid="uid://dg0yhcg0ds2nb" path="res://assets/ui_or_styling/button/col_orange_btn.tres" id="5_m35uw"]
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="6_027lu"]
+[ext_resource type="PackedScene" uid="uid://duu3pxrrodmuf" path="res://scenes/ui/upgrade_common/upgrade_node_display.tscn" id="7_y3c0n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tf3nt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m35uw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lo1t2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("6_027lu")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.5400761, 0.3555004, 0.23889899, 1)
+
+[node name="BaseUpgrade" type="Control" unique_id=1683773245 node_paths=PackedStringArray("close_button", "upgrade_button", "rewards_container", "rewards_hbox", "require_container", "require_hbox", "level_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lo1t2")
+display_node_scene = ExtResource("7_y3c0n")
+close_button = NodePath("Popup/Close")
+upgrade_button = NodePath("Popup/Upgrade")
+rewards_container = NodePath("Popup/Rewards")
+rewards_hbox = NodePath("Popup/Rewards/HBoxContainer")
+require_container = NodePath("Popup/Requirements")
+require_hbox = NodePath("Popup/Requirements/HBoxContainer")
+level_label = NodePath("Popup/LevelLabel")
+screen_id = 2
+
+[node name="DarkBackground" parent="." unique_id=1748504873 instance=ExtResource("1_lxu17")]
+layout_mode = 1
+
+[node name="Popup" type="Control" parent="." unique_id=672312361]
+custom_minimum_size = Vector2(961.6, 586.32)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.71
+offset_top = -230.4025
+offset_right = 418.71
+offset_bottom = 230.4025
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_k612n")
+
+[node name="Background" type="Panel" parent="Popup" unique_id=1130599722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close" type="Button" parent="Popup" unique_id=1358214050]
+custom_minimum_size = Vector2(65.67, 65.67)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -35.11499
+offset_top = -23.6
+offset_right = 30.554993
+offset_bottom = 42.07
+grow_horizontal = 0
+theme = ExtResource("3_0vrxf")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+text = "X"
+
+[node name="ButtonHover" parent="Popup/Close" unique_id=753706803 instance=ExtResource("4_tf3nt")]
+
+[node name="LevelLabel" type="Label" parent="Popup" unique_id=1505766927]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -321.5
+offset_top = 39.96
+offset_right = 321.5
+offset_bottom = 103.96
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tf3nt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m35uw")
+text = "COMPANY LEVEL 0 > LEVEL 1"
+
+[node name="Upgrade" type="Button" parent="Popup" unique_id=1746998260]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -121.610016
+offset_right = 119.0
+offset_bottom = -51.60962
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_m35uw")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 51
+text = "UPGRADE"
+
+[node name="ButtonHover" parent="Popup/Upgrade" unique_id=777161320 instance=ExtResource("4_tf3nt")]
+
+[node name="Requirements" type="Control" parent="Popup" unique_id=1473177640]
+custom_minimum_size = Vector2(0, 111.645)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -131.737
+offset_bottom = -20.09198
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Popup/Requirements" unique_id=554403707]
+custom_minimum_size = Vector2(910.98, 129.34)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lo1t2")
+
+[node name="Label" type="Label" parent="Popup/Requirements" unique_id=639500308]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = -36.39
+offset_right = 150.0
+offset_bottom = -5.3899994
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tf3nt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m35uw")
+text = "UPGRADE REQUIREMENTS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Requirements" unique_id=1063303370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="Rewards" type="Control" parent="Popup" unique_id=1956573072]
+custom_minimum_size = Vector2(0, 111.645)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 33.328003
+offset_bottom = 144.97305
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Popup/Rewards" unique_id=158825039]
+custom_minimum_size = Vector2(910.98, 129.34)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lo1t2")
+
+[node name="Label" type="Label" parent="Popup/Rewards" unique_id=510056292]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = -36.39
+offset_right = 150.0
+offset_bottom = -5.3899994
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tf3nt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m35uw")
+text = "UPGRADE REWARDS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Rewards" unique_id=630164361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1

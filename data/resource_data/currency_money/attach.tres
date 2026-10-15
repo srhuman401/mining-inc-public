@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://bc6qv67upc6ss"]
+
+[ext_resource type="Resource" uid="uid://c14dbq6fconht" path="res://data/resource_data/currency_money/display.tres" id="1_kfjtv"]
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="2_mgpht"]
+[ext_resource type="Resource" uid="uid://dfi8pmkcenm13" path="res://data/resource_data/currency_money/smelt.tres" id="3_d5yua"]
+
+[resource]
+script = ExtResource("2_mgpht")
+smelt_behaviour = ExtResource("3_d5yua")
+display_behaviour = ExtResource("1_kfjtv")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

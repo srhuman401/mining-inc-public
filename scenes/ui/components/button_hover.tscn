@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vyvd26xu7var"]
+
+[ext_resource type="Script" uid="uid://c6t0i37inne46" path="res://scripts/ui/components/button_hover.gd" id="1_evcaq"]
+
+[node name="ButtonHover" type="Node" unique_id=753706803]
+script = ExtResource("1_evcaq")

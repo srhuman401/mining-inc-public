@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="GameResourceAttacher" format=3 uid="uid://cd8m3x4kigkjn"]
+
+[ext_resource type="Resource" uid="uid://dhb0uvpq35f4o" path="res://data/resource_data/coal/display.tres" id="1_qnuf5"]
+[ext_resource type="Script" uid="uid://demvb1uonm6q4" path="res://scripts/resource/game_resource_attacher.gd" id="2_ueaxm"]
+[ext_resource type="Resource" uid="uid://j75583fh13va" path="res://data/resource_data/coal/smelt.tres" id="3_l2dyc"]
+[ext_resource type="Resource" uid="uid://c7pnhonfkfh4k" path="res://data/resource_data/coal/sell.tres" id="3_ueaxm"]
+
+[resource]
+script = ExtResource("2_ueaxm")
+for_resource_enum = 1
+smelt_behaviour = ExtResource("3_l2dyc")
+display_behaviour = ExtResource("1_qnuf5")
+sell_behaviour = ExtResource("3_ueaxm")
+metadata/_custom_type_script = "uid://demvb1uonm6q4"

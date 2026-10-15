@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://duu3pxrrodmuf"]
+
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="1_2id2f"]
+[ext_resource type="Script" uid="uid://dgmuvlxft3pwo" path="res://scripts/ui/game/upgrade_common/upgrade_node_display.gd" id="2_eiqq8"]
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="2_fefpm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2id2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fefpm"]
+
+[node name="UpgradeNodeDisplay" type="Control" unique_id=288397160 node_paths=PackedStringArray("general_mode", "general_icon_texture", "general_amount_label", "tooltip", "tooltip_text_label")]
+custom_minimum_size = Vector2(95.055, 111)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_2id2f")
+script = ExtResource("2_eiqq8")
+general_mode = NodePath("TypeGeneral")
+general_icon_texture = NodePath("TypeGeneral/IconTexture")
+general_amount_label = NodePath("TypeGeneral/AmountLabel")
+tooltip = NodePath("Tooltip")
+tooltip_text_label = NodePath("Tooltip/TextLabel")
+
+[node name="HoverLeaveRect" type="Control" parent="." unique_id=298936799]
+visible = false
+custom_minimum_size = Vector2(102.145, 141.12)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.072502
+offset_top = -52.945
+offset_right = 51.072506
+offset_bottom = 88.17499
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1297594618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TypeGeneral" type="Control" parent="." unique_id=188891463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AmountLabel" type="Label" parent="TypeGeneral" unique_id=242189801]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.9995
+offset_top = -32.519997
+offset_right = 20.000492
+offset_bottom = -8.519997
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2id2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fefpm")
+text = "9.9K"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconTexture" type="TextureRect" parent="TypeGeneral" unique_id=72490276]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5005
+offset_top = -45.155
+offset_right = 32.4995
+offset_bottom = 19.845001
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fefpm")
+expand_mode = 1
+
+[node name="Tooltip" type="Control" parent="." unique_id=1382851103]
+custom_minimum_size = Vector2(116.37, 45.045)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.1845
+offset_top = -7.9850006
+offset_right = 58.185513
+offset_bottom = 37.06006
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Tooltip" unique_id=930579584]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextLabel" type="Label" parent="Tooltip" unique_id=1881883062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2id2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fefpm")
+text = "SOMETHING SOMETHING HAHAHAHAAHAHHA GET IT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

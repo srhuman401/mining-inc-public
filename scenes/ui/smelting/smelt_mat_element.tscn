@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dowgu0jiw3w43"]
+
+[ext_resource type="Texture2D" uid="uid://bef2srrb1ie68" path="res://icon.svg" id="1_avgue"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="1_biieb"]
+[ext_resource type="Script" uid="uid://03g0qi53gbua" path="res://scripts/ui/game/smelt_mat_element.gd" id="2_p6k78"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx77n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5utcq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6k78"]
+
+[node name="SmeltMatElement" type="Control" unique_id=1270070448 node_paths=PackedStringArray("res_icon", "res_amount", "button_element")]
+custom_minimum_size = Vector2(119.58, 109.875)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_biieb")
+script = ExtResource("2_p6k78")
+res_icon = NodePath("TextureRect")
+res_amount = NodePath("Label")
+button_element = NodePath("Button")
+
+[node name="Background" type="Panel" parent="." unique_id=1737634996]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=15664563]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.910002
+offset_top = 7.91
+offset_right = 29.909996
+offset_bottom = 63.98701
+grow_horizontal = 2
+texture = ExtResource("1_avgue")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=367518970]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.5
+offset_top = -45.805
+offset_right = 39.5
+offset_bottom = -13.804977
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qx77n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5utcq")
+text = "100000"
+
+[node name="Button" type="Button" parent="." unique_id=2084187867]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_p6k78")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6k78")

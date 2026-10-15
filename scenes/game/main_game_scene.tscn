@@ -1,0 +1,303 @@
+[gd_scene format=3 uid="uid://bq6kvxigtacao"]
+
+[ext_resource type="Script" uid="uid://jw7mi3goxw8g" path="res://scripts/game/game_manager.gd" id="1_5lrbu"]
+[ext_resource type="Script" uid="uid://c83jtuomvnrqo" path="res://scripts/game/resources_manager.gd" id="2_a2uxt"]
+[ext_resource type="TileSet" uid="uid://njf72m7cu681" path="res://assets/tile_set_island.tres" id="2_hvqvh"]
+[ext_resource type="Script" uid="uid://cgp7eaj6bhexm" path="res://scripts/game/mouse_handler.gd" id="2_o4wif"]
+[ext_resource type="Script" uid="uid://oq4vetdn1vtw" path="res://scripts/game/game_events.gd" id="2_v68og"]
+[ext_resource type="Texture2D" uid="uid://bq2vkj6lshubt" path="res://assets/textures/sky/MOUNTAIN_1.png" id="3_d8vpe"]
+[ext_resource type="Script" uid="uid://8byeuaoo373v" path="res://scripts/game/entity_manager.gd" id="3_eyu61"]
+[ext_resource type="Script" uid="uid://chw4t0nsmt2uo" path="res://scripts/game/game_camera_free.gd" id="3_w6rgl"]
+[ext_resource type="Texture2D" uid="uid://csa3n325j2tbj" path="res://assets/textures/sky/MOUNTAIN_2.png" id="4_5gfbv"]
+[ext_resource type="Material" uid="uid://c6u28qius82pi" path="res://assets/shaders/hide_rect_sh.tres" id="4_ei1ss"]
+[ext_resource type="Texture2D" uid="uid://mntt5pm0hd27" path="res://assets/textures/sky/CLOUD_FOREGROUND.png" id="4_ohuir"]
+[ext_resource type="Script" uid="uid://bmjlouoatv76i" path="res://scripts/game/upgrade_manager.gd" id="5_0nrlb"]
+[ext_resource type="Script" uid="uid://c54gy1nasvmvy" path="res://scripts/game/rect_fog.gd" id="5_cdp4o"]
+[ext_resource type="Script" uid="uid://dweny83t1oeby" path="res://scripts/game/placement_manager.gd" id="6_iihaf"]
+[ext_resource type="Texture2D" uid="uid://b1p80s5yxueaf" path="res://assets/textures/sky/WATER_BG.png" id="6_tvj8q"]
+[ext_resource type="TileSet" uid="uid://2xdifrevgpmt" path="res://assets/tile_set_lighting.tres" id="7_k0chb"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="9_1p2ky"]
+[ext_resource type="Script" uid="uid://b8px7hywil3xw" path="res://scripts/ui/debug_ui/debug_resource_display.gd" id="10_iyi0i"]
+[ext_resource type="Script" uid="uid://bdhrhjj201c86" path="res://scripts/game/vfx_manager.gd" id="10_qsdxu"]
+[ext_resource type="Script" uid="uid://c2jwtgfifu2jn" path="res://scripts/game/sell_manager.gd" id="11_4txwj"]
+[ext_resource type="Script" uid="uid://t2mn8oghxobp" path="res://scripts/ui/debug_ui/debug_level_display.gd" id="12_s33ne"]
+[ext_resource type="Script" uid="uid://b832p1ajdgt86" path="res://scripts/game/smelt_manager.gd" id="15_70621"]
+[ext_resource type="PackedScene" uid="uid://h4pb6m83crlw" path="res://scenes/ui/game_ui.tscn" id="15_ckwkb"]
+[ext_resource type="Script" uid="uid://bifcu0dvpjtrx" path="res://scripts/game/research_upgrade_manager.gd" id="16_ca6wp"]
+[ext_resource type="Script" uid="uid://b67d6sc6jotyh" path="res://scripts/game/debug_commands.gd" id="16_v8bfg"]
+[ext_resource type="Script" uid="uid://cu12i16pl3lwq" path="res://scripts/game/entity_container.gd" id="24_4a52f"]
+
+[sub_resource type="Gradient" id="Gradient_5gfbv"]
+colors = PackedColorArray(0.32656398, 0.8939876, 0.9999998, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ohuir"]
+gradient = SubResource("Gradient_5gfbv")
+
+[sub_resource type="Gradient" id="Gradient_ohuir"]
+offsets = PackedFloat32Array(0.17991632, 0.8033473)
+colors = PackedColorArray(0.09547035, 3.1357184e-05, 0.36220095, 1, 0.0253638, 0.0253638, 0.025363795, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k0chb"]
+gradient = SubResource("Gradient_ohuir")
+
+[node name="GameManager" type="Node2D" unique_id=1778934381 node_paths=PackedStringArray("tile_map", "lighting_tile_map", "resources", "fog_rect", "entity", "sell_mgr", "game_events", "vfx_manager", "game_camera", "upgrade_manager", "research_manager", "placement", "smelting", "game_ui")]
+script = ExtResource("1_5lrbu")
+tile_map = NodePath("TileMapLayer")
+lighting_tile_map = NodePath("ShadowTileMapLayer")
+resources = NodePath("Resources")
+fog_rect = NodePath("Effect/FogRect")
+entity = NodePath("EntityManager")
+sell_mgr = NodePath("SellingManager")
+game_events = NodePath("GameEvents")
+vfx_manager = NodePath("VfxManager")
+game_camera = NodePath("GameCamera")
+upgrade_manager = NodePath("UpgradeManager")
+research_manager = NodePath("ResearchManager")
+placement = NodePath("PlacementManager")
+smelting = NodePath("SmeltManager")
+game_ui = NodePath("GameUI")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1241424505]
+
+[node name="GameCamera" type="Camera2D" parent="." unique_id=930810812]
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+script = ExtResource("3_w6rgl")
+
+[node name="SkyColor" type="TextureRect" parent="GameCamera" unique_id=1962918494]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(25, 25)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_ohuir")
+
+[node name="SkyColorNight" type="TextureRect" parent="GameCamera" unique_id=277914549]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(25, 25)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_k0chb")
+
+[node name="Parallax" type="Node2D" parent="." unique_id=381447349]
+
+[node name="Water" type="Parallax2D" parent="Parallax" unique_id=1819162540]
+modulate = Color(1, 1, 1, 0.8980392)
+scale = Vector2(0.7, 0.7)
+scroll_scale = Vector2(0.05, 0.05)
+scroll_offset = Vector2(0, 656.865)
+repeat_size = Vector2(4092, 0)
+autoscroll = Vector2(2.7, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Water" unique_id=805632595]
+texture = ExtResource("6_tvj8q")
+
+[node name="Mountain" type="Parallax2D" parent="Parallax" unique_id=31082658]
+modulate = Color(1, 1, 1, 0.5529412)
+scale = Vector2(0.7, 0.7)
+scroll_scale = Vector2(0.05, 0.05)
+scroll_offset = Vector2(211.7, 309.55)
+repeat_size = Vector2(4092, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Mountain" unique_id=1009701459]
+texture = ExtResource("3_d8vpe")
+
+[node name="Cloud" type="Parallax2D" parent="Parallax" unique_id=1579397890]
+modulate = Color(1, 1, 1, 0.34901962)
+scale = Vector2(0.6, 0.6)
+scroll_scale = Vector2(0.05, 0.05)
+scroll_offset = Vector2(0, 338.72)
+repeat_size = Vector2(4092, 0)
+autoscroll = Vector2(5, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Cloud" unique_id=891289487]
+texture = ExtResource("4_ohuir")
+
+[node name="Mountain2" type="Parallax2D" parent="Parallax" unique_id=1409588112]
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.25, 0.25)
+scroll_offset = Vector2(22.435, 348.87)
+repeat_size = Vector2(4092, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Mountain2" unique_id=1179299366]
+texture = ExtResource("4_5gfbv")
+
+[node name="BackgroundEntityContainer" type="Node2D" parent="." unique_id=1747062115]
+script = ExtResource("24_4a52f")
+metadata/_custom_type_script = "uid://cu12i16pl3lwq"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1451238696]
+tile_set = ExtResource("2_hvqvh")
+
+[node name="ShadowTileMapLayer" type="TileMapLayer" parent="." unique_id=616222318]
+tile_set = ExtResource("7_k0chb")
+
+[node name="ForegroundEntityContainer" type="Node2D" parent="." unique_id=2112571074]
+script = ExtResource("24_4a52f")
+metadata/_custom_type_script = "uid://cu12i16pl3lwq"
+
+[node name="GameEvents" type="Node" parent="." unique_id=567265514]
+script = ExtResource("2_v68og")
+
+[node name="Resources" type="Node" parent="." unique_id=1360021914 node_paths=PackedStringArray("manager")]
+script = ExtResource("2_a2uxt")
+manager = NodePath("..")
+
+[node name="SellingManager" type="Node" parent="." unique_id=1551621366 node_paths=PackedStringArray("manager")]
+script = ExtResource("11_4txwj")
+manager = NodePath("..")
+metadata/_custom_type_script = "uid://c2jwtgfifu2jn"
+
+[node name="EntityManager" type="Node" parent="." unique_id=1368113621 node_paths=PackedStringArray("background_entity_visual_container", "foreground_entity_visual_container")]
+script = ExtResource("3_eyu61")
+background_entity_visual_container = NodePath("../BackgroundEntityContainer")
+foreground_entity_visual_container = NodePath("../ForegroundEntityContainer")
+
+[node name="EntityTick" type="Timer" parent="EntityManager" unique_id=2101673234]
+
+[node name="MouseHandler" type="Node" parent="." unique_id=1545819235 node_paths=PackedStringArray("manager")]
+script = ExtResource("2_o4wif")
+manager = NodePath("..")
+
+[node name="PlacementManager" type="Node" parent="." unique_id=1927074139 node_paths=PackedStringArray("manager", "game_events", "mouse_handler")]
+script = ExtResource("6_iihaf")
+manager = NodePath("..")
+game_events = NodePath("../GameEvents")
+mouse_handler = NodePath("../MouseHandler")
+
+[node name="UpgradeManager" type="Node" parent="." unique_id=913170603 node_paths=PackedStringArray("manager")]
+script = ExtResource("5_0nrlb")
+manager = NodePath("..")
+
+[node name="VfxManager" type="Node" parent="." unique_id=1727193081]
+script = ExtResource("10_qsdxu")
+
+[node name="SmeltManager" type="Node" parent="." unique_id=1584852429 node_paths=PackedStringArray("manager")]
+script = ExtResource("15_70621")
+manager = NodePath("..")
+
+[node name="ResearchManager" type="Node" parent="." unique_id=269014149 node_paths=PackedStringArray("manager")]
+script = ExtResource("16_ca6wp")
+manager = NodePath("..")
+
+[node name="DebugCommands" type="Node" parent="." unique_id=937039239 node_paths=PackedStringArray("display", "display_typing_cmd")]
+script = ExtResource("16_v8bfg")
+display = NodePath("ListeningDisplay")
+display_typing_cmd = NodePath("ListeningDisplay/Label")
+
+[node name="ListeningDisplay" type="CanvasLayer" parent="DebugCommands" unique_id=1433657279]
+visible = false
+
+[node name="Label" type="Label" parent="DebugCommands/ListeningDisplay" unique_id=1580961726]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -34.0
+offset_right = 131.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_1p2ky")
+theme_override_font_sizes/font_size = 29
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClockTick" type="Timer" parent="." unique_id=1890656370]
+wait_time = 0.5
+autostart = true
+
+[node name="Autosave" type="Timer" parent="." unique_id=466231890]
+wait_time = 70.0
+autostart = true
+
+[node name="TileTick" type="Timer" parent="." unique_id=819559817]
+wait_time = 0.5
+autostart = true
+
+[node name="Effect" type="CanvasLayer" parent="." unique_id=556620602]
+
+[node name="FogRect" type="ColorRect" parent="Effect" unique_id=1066198166]
+material = ExtResource("4_ei1ss")
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(960, 540)
+mouse_filter = 2
+script = ExtResource("5_cdp4o")
+
+[node name="Blue" type="ColorRect" parent="Effect" unique_id=2065838458]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 1, 0.5882353)
+
+[node name="DebugUI" type="CanvasLayer" parent="." unique_id=1314791695]
+
+[node name="Control" type="Control" parent="DebugUI" unique_id=379692376]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -1.0
+offset_right = -15.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("9_1p2ky")
+
+[node name="CoalDebugDisplay" type="Label" parent="DebugUI/Control" unique_id=1544884046]
+layout_mode = 0
+offset_right = 157.0
+offset_bottom = 26.0
+text = "Coal: 0"
+script = ExtResource("10_iyi0i")
+resource_to_track = 1
+prefix = "Coal:"
+
+[node name="DebugLevelDisplay" type="Label" parent="DebugUI/Control" unique_id=2145735320 node_paths=PackedStringArray("manager")]
+layout_mode = 0
+offset_top = 29.0
+offset_right = 157.0
+offset_bottom = 55.0
+text = "Base Level: 0"
+script = ExtResource("12_s33ne")
+manager = NodePath("../../..")
+
+[node name="GameUI" parent="." unique_id=295106819 instance=ExtResource("15_ckwkb")]

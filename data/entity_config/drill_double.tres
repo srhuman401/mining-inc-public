@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityDataConfig" format=3 uid="uid://udedfgy08yyi"]
+
+[ext_resource type="PackedScene" uid="uid://g65582j5dpii" path="res://scenes/entity/ent_drl_dbl_visual.tscn" id="1_7rkni"]
+[ext_resource type="Script" uid="uid://5sogwl0ngmt7" path="res://scripts/resource/entity_resource_config.gd" id="2_wmc88"]
+
+[resource]
+script = ExtResource("2_wmc88")
+attach_entity_enum = 8
+entity_behaviour_path = "drills/double_behv.gd"
+entity_visual_scene = ExtResource("1_7rkni")
+metadata/_custom_type_script = "uid://5sogwl0ngmt7"

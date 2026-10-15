@@ -1,0 +1,23 @@
+trying out new format
+
+DAYS:
+- (M)ONDAY 	[ SKIPPED ]
+- (TU)ESDAY 	[ 6/5 ] (hell yeah)
+- (W)EDNESDAY 	[ 5/5 ] (easy)
+- (TH)URSDAY 	[ 8/5 ]
+- (F)RIDAY 	[ 5/5 ] (week done easy)
+
+TODO:
+- [TU] (1) figure out how to implement a sky (so that it looks good)
+- [F] (2) create art for: background clouds
+- [TH] (2) create art for: sky background mountains
+- [W] (3) create basic UI for list of resources amounts (very simple, icon > name > amount in a vbox list)
+- [TH] (2) create art for double drill (drill with 2 drill things, fast rate but low damage)
+- [TH] (1) implement item double drill
+- [TH] (3) try to implement (parallax?) sky using research
+- [TU] (1) implement rookdv start screen
+- [TU] (2) create art for: gold ore
+- [TU] (2) create art for: gold ingot
+- [W] (2) create art for: gold ore (icon)
+- [-] (3) create basic UI for furnace / smelting
+- [F] (3) create basic UI that displays pickaxe stats 

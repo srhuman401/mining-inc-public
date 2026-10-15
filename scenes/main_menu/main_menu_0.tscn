@@ -1,0 +1,500 @@
+[gd_scene format=3 uid="uid://o7h7dd6idek6"]
+
+[ext_resource type="Script" uid="uid://b3t6qj6y6plyi" path="res://scripts/main_menu/mm_ui_manager.gd" id="1_6pq3r"]
+[ext_resource type="Script" uid="uid://di7gnpsuydedn" path="res://scripts/main_menu/test_start_button.gd" id="1_8i1wa"]
+[ext_resource type="Theme" uid="uid://dhc87wtd0nwf5" path="res://assets/ui_or_styling/theme_1.tres" id="1_bibsa"]
+[ext_resource type="StyleBox" uid="uid://cuxej8s2whv4q" path="res://assets/ui_or_styling/style_uiframe_box.tres" id="1_q0u75"]
+[ext_resource type="Script" uid="uid://ka7usvskgdc" path="res://scripts/main_menu/main_menu_intro_reveal.gd" id="1_vpfvk"]
+[ext_resource type="Script" uid="uid://baleu0axj335l" path="res://scenes/main_menu/reset_button_1.gd" id="4_pvtoo"]
+[ext_resource type="PackedScene" uid="uid://vyvd26xu7var" path="res://scenes/ui/components/button_hover.tscn" id="4_r7emp"]
+[ext_resource type="Texture2D" uid="uid://dm27cm407r71h" path="res://assets/textures/misc/LOGO_TEMP.png" id="6_50r83"]
+[ext_resource type="PackedScene" uid="uid://bnn1pm6od4g80" path="res://scenes/ui/sub_loading_ui.tscn" id="7_50r83"]
+[ext_resource type="Script" uid="uid://vdyvwe2c3eyp" path="res://scripts/main_menu/load_game_screen.gd" id="8_o8lmw"]
+[ext_resource type="Texture2D" uid="uid://cuopv3hvuu8i7" path="res://assets/textures/ui_related/UI_FR_1.png" id="8_yx5ay"]
+[ext_resource type="Script" uid="uid://bw88lb26b0gyu" path="res://scripts/main_menu/quit_button.gd" id="10_6pxrc"]
+[ext_resource type="Script" uid="uid://d2hs5kvvvuiqa" path="res://scripts/main_menu/screen_switcher_button.gd" id="10_o8lmw"]
+[ext_resource type="StyleBox" uid="uid://148wpxwv1teb" path="res://assets/ui_or_styling/style_db_uifbox.tres" id="12_by721"]
+[ext_resource type="Script" uid="uid://4uxu8gw48rfu" path="res://scripts/main_menu/name_entry.gd" id="12_i8c8a"]
+[ext_resource type="AudioStream" uid="uid://bs6xpba076hpr" path="res://assets/sound_effects/snd_reveallogo.ogg" id="13_2sggb"]
+[ext_resource type="Script" uid="uid://c6t0i37inne46" path="res://scripts/ui/components/button_hover.gd" id="13_n6njd"]
+[ext_resource type="AudioStream" uid="uid://b7oke0rl864bo" path="res://assets/music_ambience/Track_Menu.wav" id="14_2tide"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ju3oc"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("8_yx5ay")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.77057916, 0.5429904, 0.39971325, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yx5ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ju3oc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx5ay"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("8_yx5ay")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+modulate_color = Color(0.49221736, 0.32100543, 0.21266973, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_by721"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n6njd"]
+
+[sub_resource type="Animation" id="Animation_2sggb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UIManager/Hud/Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UIManager/Hud/Logo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(578.395, 295.9)]
+}
+
+[sub_resource type="Animation" id="Animation_vpfvk"]
+resource_name = "reveal"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UIManager/Hud/Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.13333334, 0, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UIManager/Hud/Logo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(578.395, 330.655), Vector2(578.395, 304.525)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2sggb"]
+_data = {
+&"RESET": SubResource("Animation_2sggb"),
+&"reveal": SubResource("Animation_vpfvk")
+}
+
+[node name="MainMenu0" type="Node2D" unique_id=1088933811 node_paths=PackedStringArray("logo", "main_menu_control", "animator", "menu_music", "reveal_sound")]
+script = ExtResource("1_vpfvk")
+logo = NodePath("UIManager/Hud/Logo")
+main_menu_control = NodePath("UIManager/MainMenu")
+animator = NodePath("AnimationPlayer")
+menu_music = NodePath("Music")
+reveal_sound = NodePath("Reveal")
+
+[node name="UIManager" type="CanvasLayer" parent="." unique_id=343997857 node_paths=PackedStringArray("screens")]
+script = ExtResource("1_6pq3r")
+screens = {
+"loadgame": NodePath("LoadGame"),
+"none": NodePath("MainMenu")
+}
+
+[node name="Hud" type="Control" parent="UIManager" unique_id=1656541971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bibsa")
+
+[node name="Logo" type="TextureRect" parent="UIManager/Hud" unique_id=1044145845]
+custom_minimum_size = Vector2(957.825, 411.53)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1341.605
+offset_top = -244.1
+offset_right = -383.7798
+offset_bottom = 167.43341
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_50r83")
+
+[node name="MainMenu" type="Control" parent="UIManager" unique_id=1815425080]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bibsa")
+
+[node name="DebugStartButton" type="Button" parent="UIManager/MainMenu" unique_id=574235896 node_paths=PackedStringArray("loading_screen")]
+visible = false
+modulate = Color(0.7659062, 0.43932772, 0.28296027, 1)
+custom_minimum_size = Vector2(200, 65.525)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 681.0
+offset_top = 370.0
+offset_right = 881.0
+offset_bottom = 435.52502
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "GAME 1"
+expand_icon = true
+script = ExtResource("1_8i1wa")
+loading_screen = NodePath("../../../SubLoadingUi")
+
+[node name="ButtonHover" parent="UIManager/MainMenu/DebugStartButton" unique_id=753706803 instance=ExtResource("4_r7emp")]
+
+[node name="DebugStartButton3" type="Button" parent="UIManager/MainMenu" unique_id=1314130671]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 519.0
+offset_top = 450.0
+offset_right = 876.5
+offset_bottom = 518.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "CLEAR GAME 1"
+expand_icon = true
+script = ExtResource("4_pvtoo")
+
+[node name="ButtonHover" parent="UIManager/MainMenu/DebugStartButton3" unique_id=2128390987 instance=ExtResource("4_r7emp")]
+
+[node name="Panel" type="Panel" parent="UIManager/MainMenu" unique_id=506560579]
+custom_minimum_size = Vector2(318.2, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 350.90497
+offset_bottom = 79.0
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="UIManager/MainMenu" unique_id=908637466 node_paths=PackedStringArray("manager")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -930.0
+offset_top = -252.0
+offset_right = -649.0
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "PLAY"
+expand_icon = true
+script = ExtResource("10_o8lmw")
+screen_name = "loadgame"
+manager = NodePath("../..")
+
+[node name="ButtonHover" parent="UIManager/MainMenu/StartButton" unique_id=1254311179 instance=ExtResource("4_r7emp")]
+
+[node name="SettingsButton" type="Button" parent="UIManager/MainMenu" unique_id=1215163826]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -930.0
+offset_top = -143.0
+offset_right = -649.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "SETTINGS"
+expand_icon = true
+
+[node name="ButtonHover" parent="UIManager/MainMenu/SettingsButton" unique_id=1235137615 instance=ExtResource("4_r7emp")]
+
+[node name="QuitButton" type="Button" parent="UIManager/MainMenu" unique_id=1908817598]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -930.0
+offset_top = -29.0
+offset_right = -649.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "QUIT"
+expand_icon = true
+script = ExtResource("10_6pxrc")
+
+[node name="ButtonHover" parent="UIManager/MainMenu/QuitButton" unique_id=746966895 instance=ExtResource("4_r7emp")]
+
+[node name="LoadGame" type="Control" parent="UIManager" unique_id=72794317 node_paths=PackedStringArray("vbox_cont", "loading_screen", "enter_name")]
+visible = false
+custom_minimum_size = Vector2(604.035, 0)
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme = ExtResource("1_bibsa")
+script = ExtResource("8_o8lmw")
+vbox_cont = NodePath("SlotsPanel/VBoxContainer")
+loading_screen = NodePath("../../SubLoadingUi")
+enter_name = NodePath("../NameEntry")
+
+[node name="Panel" type="Panel" parent="UIManager/LoadGame" unique_id=760567251]
+custom_minimum_size = Vector2(560.9, 1116.955)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.4505
+offset_top = -506.002
+offset_right = 280.44955
+offset_bottom = 610.9531
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ju3oc")
+
+[node name="StartButton" type="Button" parent="UIManager/LoadGame" unique_id=1805193972 node_paths=PackedStringArray("manager")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.84497
+offset_top = 49.88
+offset_right = -55.70929
+offset_bottom = 103.88003
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("1_q0u75")
+text = "BACK"
+expand_icon = true
+script = ExtResource("10_o8lmw")
+screen_name = "none"
+manager = NodePath("../..")
+
+[node name="ButtonHover" parent="UIManager/LoadGame/StartButton" unique_id=359233405 instance=ExtResource("4_r7emp")]
+
+[node name="Label" type="Label" parent="UIManager/LoadGame" unique_id=507341698]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 34.0
+offset_right = 424.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yx5ay")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ju3oc")
+text = "SLOTS"
+horizontal_alignment = 1
+
+[node name="SlotsPanel" type="Panel" parent="UIManager/LoadGame" unique_id=933651330]
+custom_minimum_size = Vector2(528.735, 1022.165)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -265.35248
+offset_top = -422.552
+offset_right = 263.38254
+offset_bottom = 599.61304
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yx5ay")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/LoadGame/SlotsPanel" unique_id=349787937]
+custom_minimum_size = Vector2(4.3, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -244.5
+offset_right = 244.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameEntry" type="Control" parent="UIManager" unique_id=655645141 node_paths=PackedStringArray("name_input", "confirm", "cancel")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bibsa")
+script = ExtResource("12_i8c8a")
+name_input = NodePath("Panel/NameInput")
+confirm = NodePath("Panel/Confirm")
+cancel = NodePath("Panel/Cancel")
+
+[node name="ColorRect" type="ColorRect" parent="UIManager/NameEntry" unique_id=380838765]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0.007843138, 0.007843138, 0.5294118)
+
+[node name="Panel" type="Panel" parent="UIManager/NameEntry" unique_id=1226847175]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.45007
+offset_top = -326.001
+offset_right = 280.45007
+offset_bottom = 326.001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ju3oc")
+
+[node name="Prompt" type="Label" parent="UIManager/NameEntry/Panel" unique_id=16990687]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.00008
+offset_top = 47.926
+offset_right = 250.99994
+offset_bottom = 165.92699
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxEmpty_by721")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n6njd")
+text = "What would you like to name your mining company?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="NameInput" type="LineEdit" parent="UIManager/NameEntry/Panel" unique_id=1399110593]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.79987
+offset_top = -58.99997
+offset_right = 256.79987
+offset_bottom = 40.250122
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("12_by721")
+theme_override_styles/read_only = ExtResource("12_by721")
+theme_override_styles/focus = ExtResource("12_by721")
+placeholder_text = "e.g. 'Mining' -> 'Mining Co.'"
+alignment = 1
+max_length = 20
+
+[node name="Confirm" type="Button" parent="UIManager/NameEntry/Panel" unique_id=1926447752]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -162.48596
+offset_right = 235.45007
+offset_bottom = -85.484985
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "CONFIRM"
+
+[node name="UIButtonHover" type="Node" parent="UIManager/NameEntry/Panel/Confirm" unique_id=833727767]
+script = ExtResource("13_n6njd")
+metadata/_custom_type_script = "uid://c6t0i37inne46"
+
+[node name="Cancel" type="Button" parent="UIManager/NameEntry/Panel" unique_id=915367167]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -235.45013
+offset_top = -162.48596
+offset_right = -35.00006
+offset_bottom = -85.484985
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "CANCEL"
+
+[node name="UIButtonHover" type="Node" parent="UIManager/NameEntry/Panel/Cancel" unique_id=808285490]
+script = ExtResource("13_n6njd")
+metadata/_custom_type_script = "uid://c6t0i37inne46"
+
+[node name="SubLoadingUi" parent="." unique_id=1059078870 instance=ExtResource("7_50r83")]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2081165555]
+libraries/ = SubResource("AnimationLibrary_2sggb")
+
+[node name="Reveal" type="AudioStreamPlayer" parent="." unique_id=262543665]
+stream = ExtResource("13_2sggb")
+volume_db = 0.819
+pitch_scale = 0.81
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1755225506]
+stream = ExtResource("14_2tide")
+volume_db = 0.819
+pitch_scale = 1.03

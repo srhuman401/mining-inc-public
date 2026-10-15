@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="GameConfig" format=3 uid="uid://bxwryjkivf623"]
+
+[ext_resource type="Script" uid="uid://chhb7brgroddi" path="res://scripts/resource/base_upgrade.gd" id="1_50l2b"]
+[ext_resource type="Resource" uid="uid://bu3a3yr13xuyp" path="res://data/map_definitions/test_map/data.tres" id="1_dplh2"]
+[ext_resource type="Script" uid="uid://dn1krc5yr8212" path="res://scripts/map/map_definition.gd" id="1_lv0bn"]
+[ext_resource type="Script" uid="uid://d1pwip8e8xych" path="res://scripts/game_config_res.gd" id="2_dplh2"]
+[ext_resource type="Script" uid="uid://p1hyjhc0h28h" path="res://scripts/resource/extra_upgrade_element_text.gd" id="2_s81mn"]
+[ext_resource type="PackedScene" uid="uid://bq6kvxigtacao" path="res://scenes/game/main_game_scene.tscn" id="3_8yccn"]
+[ext_resource type="Script" uid="uid://xu1pbvhi40br" path="res://scripts/resource/upg_modifier/base_mod.gd" id="3_sh0jf"]
+[ext_resource type="PackedScene" uid="uid://o7h7dd6idek6" path="res://scenes/main_menu/main_menu_0.tscn" id="4_50l2b"]
+
+[sub_resource type="Resource" id="Resource_50l2b"]
+script = ExtResource("1_50l2b")
+resource_requirements = Dictionary[int, int]({
+0: 100
+})
+required_flags = Array[String](["tutorial_done"])
+extra_requirement_text = Array[String](["Complete tutorial"])
+do_set_pickaxe = true
+set_pickaxe_to = 1
+metadata/_custom_type_script = "uid://chhb7brgroddi"
+
+[sub_resource type="Resource" id="Resource_s81mn"]
+script = ExtResource("1_50l2b")
+resource_requirements = Dictionary[int, int]({
+0: 200
+})
+remove_fog_width = 2000
+remove_fog_height = 300
+metadata/_custom_type_script = "uid://chhb7brgroddi"
+
+[sub_resource type="Resource" id="Resource_k88go"]
+script = ExtResource("2_s81mn")
+metadata/_custom_type_script = "uid://p1hyjhc0h28h"
+
+[sub_resource type="Resource" id="Resource_sh0jf"]
+script = ExtResource("1_50l2b")
+extra_requirement_info = Array[ExtResource("2_s81mn")]([SubResource("Resource_k88go")])
+remove_fog_width = 10000
+remove_fog_height = 10000
+do_set_pickaxe = true
+set_pickaxe_to = 4
+metadata/_custom_type_script = "uid://chhb7brgroddi"
+
+[resource]
+script = ExtResource("2_dplh2")
+default_island_definition = ExtResource("1_dplh2")
+save_game_path = "_sav_"
+meta_save_extension = ".tres"
+main_game_scene = ExtResource("3_8yccn")
+main_menu_scene = ExtResource("4_50l2b")
+GAME_UPGRADES = Array[ExtResource("1_50l2b")]([null, SubResource("Resource_50l2b"), SubResource("Resource_s81mn"), SubResource("Resource_sh0jf")])
+PICKAXE_STATS = Dictionary[int, int]({
+0: 3,
+1: 5
+})
+metadata/_custom_type_script = "uid://d1pwip8e8xych"
